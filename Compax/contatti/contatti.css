@@ -1,0 +1,410 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+
+
+/*---- IMPOSTAZIONI SFONDO ONDA ----*/
+
+.custom-shape-divider-bottom-1666963594 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1666963594 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 135px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1666963594 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1666963594 svg {
+        width: calc(184% + 1.3px);
+        height: 135px;
+    }
+}
+
+
+.sezione{
+    position: relative; 
+    background: rgb(25,150,255);
+    background: -moz-linear-gradient(180deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%, rgba(248,253,253,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%, rgba(248,253,253,1) 100%);
+    background: linear-gradient(180deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%, rgba(248,253,253,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1996ff",endColorstr="#f8fdfd",GradientType=1);
+    min-height: 90vh;
+}
+
+/*-------- NAVBAR --------*/
+
+.contenitore{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 16px 32px;
+    height: 75px;
+
+    /*---GLASSMORPHISM EFFECT---*/
+    background: rgba(89, 145, 255, 0.394);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(89, 145, 255, 0.394);
+}
+
+h4{
+    color: #f9f9f9;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.panino{
+    display: none;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.panino span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    z-index: 1;
+
+    transform-origin: 0 0;
+    transition: 0.4s;
+}
+
+.opzioni{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 -16px;
+}
+
+.opzioni a{
+    color: #f9f9f9;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 16px;
+    transition: 0.4s;
+    padding: 8px 6px;
+    border-radius: 99px;
+}
+
+
+
+
+
+/*---- ANIMAZIONE PANINO BELLA ----*/
+
+.panino:hover span:nth-child(2){
+    transform: translateX(10px);
+    background-color: rgb(157, 180, 255);
+}
+
+.panino.active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+.panino.active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.panino.active span:nth-child(3){
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+.panino.active:hover span{
+    background-color: rgb(157, 180, 255);
+}
+
+
+
+
+
+
+
+
+.text{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.form{
+    width: 30%;
+    height: auto;
+    margin-top: 15%;
+    margin-left: 10%;
+    color: #f9f9f9;
+}
+
+.form h1{
+    font-size: 50px;
+}
+
+.form p{
+    font-size:medium;
+    text-align: left;
+    display: flex;
+}
+
+.immagine img{
+    width: 35%;
+    height: auto;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 8%;
+}
+
+
+
+
+
+
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 7% 0 10% 0;
+}
+
+.contattaci{
+    background-color: #f7f7f7;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 8px 10px 13px -3px rgba(0,0,0,0.1);
+}
+
+input[type=text]:focus{
+    outline: 2px solid #5991FF;
+}
+
+input[type=email]:focus{
+    outline: 2px solid #5991FF;
+}
+
+section form input{
+   border: none;
+   padding: 2%; 
+   border-radius: 10px;
+   width: 40%;
+   margin-left: 6.5%;
+   margin-top: 5%;
+   background-color: #fbfbfb;
+   box-shadow: 8px 10px 13px -3px rgba(0,0,0,0.1);
+}
+
+input[type=email]{
+    border: none;
+    padding: 2%; 
+    border-radius: 10px;
+    width: 60%;
+    margin-left: 6.5%;
+    margin-top: 5%;
+    background-color: #fbfbfb;
+    box-shadow: 8px 10px 13px -3px rgba(0,0,0,0.1);
+ }
+
+textarea{
+    border: none;
+    padding: 2%; 
+    border-radius: 10px;
+    width: 40%;
+    margin-left: 6.5%;
+    margin-top: 5%;
+    background-color: #fbfbfb;
+    box-shadow: 8px 10px 13px -3px rgba(0,0,0,0.1);
+}
+
+textarea:focus{
+    outline: 2px solid #5991FF;
+}
+
+.check{
+    margin: 8% 0 0 7%;
+    width: 8%;
+}
+
+.but-contatti{
+    border: none;
+    padding: 1.5%; 
+    border-radius: 10px;
+    width: 25%;
+    margin-left: 13%;
+    margin-top: 5%;
+    color: #f9f9f9;
+    background-color: #5991FF;
+    background: rgb(25,150,255);
+    background: -moz-linear-gradient(45deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%);
+    background: -webkit-linear-gradient(45deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%);
+    background: linear-gradient(45deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #E9E9E9;
+    padding: 5%;
+}
+
+.compaxsoftware ul li{
+    margin-top: 5%;
+}
+
+.linkutili ul li{
+    margin-top: 10%;
+}
+
+.linkutili2 ul li{
+    margin-top: 10%;
+}
+
+
+.compaxsoftware ul li a{
+    color: #a4a4a4;
+}
+
+.linkutili ul li a{
+    color: #a4a4a4;
+}
+
+.linkutili2 ul li a{
+    color: #a4a4a4;
+}
+
+
+.emailInput{
+    background-color: #E9E9E9;
+}
+
+.emailInput form{
+    display: flex;
+    flex-direction: row;
+    margin: 3% 0 1% 3%;
+}
+
+
+#email{
+    border: none;
+    background-color: #f3f3f3;
+    padding: 0.8rem;
+    border-radius: 20px;
+    width: 25%;
+}
+
+.but-email{
+    border: none;
+    color: white;
+    background-color: #5991FF;
+    width: 8%;
+    padding: 0;
+    border-radius: 15px;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+form p{
+    width: 15%;
+    margin-left: 1%;
+    font-size: 13px;
+    margin-top: 0.2rem;
+}
+
+.fa-brands{
+    font-size: 25px;
+    margin-left: 15%;
+    color: #393939;
+}
+
+.fa-brands:hover{
+    color:#5991FF;
+    cursor: pointer;
+}
+
+.social{
+    margin-left: 33%;
+    display: flex;
+    align-items: center;
+}
+
+.copyright{
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copyright p{
+    margin: 1%;
+    font-size: 15px;
+}
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: rgb(25,150,255);
+    background: -moz-linear-gradient(0deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 70%, rgba(248,253,253,0.8802871490393032) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 70%, rgba(248,253,253,0.8802871490393032) 100%);
+    background: linear-gradient(0deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 70%, rgba(248,253,253,0.8802871490393032) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1996ff",endColorstr="#f8fdfd",GradientType=1);
+    min-height: 100%;
+}
+
+body{
+    overflow: hidden;
+    min-height: 100%;
+}
+
+section{
+    width: 90%;
+    height: auto;
+    background-color: #A7DAFF;
+    margin: auto;
+    margin-top: 3.5%;
+    background-image: url(../img/pattern1.png);
+    border-radius: 5px;
+    box-shadow: 10px 13px 15px -3px rgba(0,0,0,0.1);
+}
+
+.bar{
+    width: 100%;
+    height: 10px;
+    background-color: #6DC1FF;
+}
+
+.bar .width{
+    width: 15%;
+    height: 10px;
+    background-color: #0079cf;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    color: #0063AC;
+}
+
+hr{
+    width: 100%;
+    border: 2px solid #6DC1FF;
+}
+
+form{
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin-top: 1.5rem;
+    padding: 1.5%;
+    width: 30%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 11px 14px 22px 3px rgba(0,0,0,0.1);
+}
+
+input:focus{
+    outline: #2da8ff 3px solid;
+    border: none;
+}
+
+select{
+    margin-top: 1.5rem;
+    padding: 1.5%;
+    width: 30%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 11px 14px 22px 3px rgba(0,0,0,0.1);
+}
+
+select:focus{
+    outline: #2da8ff 3px solid;
+    border: none;
+}
+
+
+.cappelloViola{
+    position: absolute;
+    top: 16%;
+    left: 10%;
+    width: 13%;
+}
+
+.diploma{
+    width: 15%;
+    position: absolute;
+    top: 30%;
+    right: 1%;
+    transform: rotate(10deg);
+}
+
+.mappamondo{
+    width: 13%;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    transform: rotate(5deg);
+}
