@@ -59,7 +59,7 @@
                     <a class="aNav" href="#diploma">Disploma</a>
                     <a class="aNav" href="#percorsi">Medie</a>
                     <a class="aNav" href="#">Statistiche</a>
-                    <a class="aNav" href="../chi siamo/chiSiamo.html">Chi siamo</a>
+                    <a class="aNav" href="../chi siamo/chiSiamo.php">Chi siamo</a>
                     <a class="aNav" href="../contatti/contatti.php">Contatti</a>
                 </div>
 
@@ -89,7 +89,7 @@
                 <div class="bottoni">
                     <a href="#">Università</a>
                     <a href="../post-medie/post_medie.php">Medie</a>
-                </div>
+                </div>  
 
             </div>
             <div class="immagine">
@@ -296,10 +296,10 @@
 
         <div class="emailInput">
             <hr>
-            <form action="#">
+            <form action="../php/invioEmail.php" method="post">
                 <input class="email" type="text" name="email" placeholder="Email" />
 
-                <input type="submit" class="but-email" value="Invia" name="inviaEmail">
+                <button type="submit" class="but-email" name="inviaEmail">Invia</button>
                 <p>Iscriviti e rimani sempre aggiornato</p>
 
                 <div class="social">
