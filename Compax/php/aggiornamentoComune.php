@@ -13,19 +13,22 @@ if(!$conn){
 $q = $_REQUEST["q"];
 $q = ltrim($q, " ");
 
-$sqlRegioneAttuale = 'SELECT DISTINCT Regione FROM scuole WHERE Provincia = "' . $q . '"  ORDER BY `scuole`.`Regione` ASC;';
+$sqlRegioneAttuale = 'SELECT DISTINCT Regione FROM scuole WHERE Comune = "' . $q . '"  ORDER BY `scuole`.`Regione` ASC;';
+$sqlProvinciaAttuale = 'SELECT DISTINCT Provincia FROM scuole WHERE Comune = "' . $q . '" ORDER BY `scuole`.`Provincia` ASC;';
 $sqlRegioni = 'SELECT DISTINCT Regione FROM scuole ORDER BY `scuole`.`Regione` ASC';
-$sqlComune = 'SELECT DISTINCT Comune FROM scuole WHERE Provincia = "' . $q . '"  ORDER BY `scuole`.`Comune` ASC;';
-$sqlNomeIstituto = 'SELECT DISTINCT `Nome istituto`, `id_scuola` FROM scuole WHERE Provincia = "' . $q . '"  ORDER BY `scuole`.`Nome istituto` ASC;';
+$sqlProvince = 'SELECT DISTINCT Provincia FROM scuole ORDER BY `scuole`.`Provincia` ASC';
+$sqlNomeIstituto = 'SELECT DISTINCT `Nome istituto`, `id_scuola` FROM scuole WHERE Comune = "' . $q . '"  ORDER BY `scuole`.`Nome istituto` ASC;';
 
 $regioneAttuale = mysqli_query($conn, $sqlRegioneAttuale);
-$comuni = mysqli_query($conn, $sqlComune);
+$provinciaAttuale = mysqli_query($conn, $sqlProvinciaAttuale);
 $regioni = mysqli_query($conn, $sqlRegioni);
+$province = mysqli_query($conn, $sqlProvince);
 $scuole = mysqli_query($conn, $sqlNomeIstituto);
 
 $arrayRegioneAttuale = array();
-$arrayComuni = array();
+$arrayProvinciaAttuale = array();
 $arrayRegione = array();
+$arrayProvince = array();
 $arrayScuole = array();
 $arrayIdScuole = array();
 
@@ -35,11 +38,11 @@ while($key = mysqli_fetch_array($regioni))
 }
 echo json_encode($arrayRegione);
 
-while($key = mysqli_fetch_array($comuni))
+while($key = mysqli_fetch_array($province))
 {
-    array_push($arrayComuni, $key["Comune"]);
+    array_push($arrayProvince, $key["Provincia"]);
 }
-echo json_encode($arrayComuni);
+echo json_encode($arrayProvince);
 
 while($key = mysqli_fetch_array($scuole))
 {
@@ -53,5 +56,11 @@ while($key = mysqli_fetch_array($regioneAttuale))
     array_push($arrayRegioneAttuale, $key["Regione"]);
 }
 echo json_encode($arrayRegioneAttuale);
+
+while($key = mysqli_fetch_array($provinciaAttuale))
+{
+    array_push($arrayProvinciaAttuale, $key["Provincia"]);
+}
+echo json_encode($arrayProvinciaAttuale);
 
 echo json_encode($arrayIdScuole);
