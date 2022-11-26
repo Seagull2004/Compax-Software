@@ -12,6 +12,7 @@ if(!isset($_SESSION['admin'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo.png">
     <link rel="stylesheet" href="admin.css">
     <script src="https://kit.fontawesome.com/bfed2c6a00.js" crossorigin="anonymous"></script>
     <title>Admin</title>
@@ -44,7 +45,7 @@ if(!isset($_SESSION['admin'])){
 
     <div class="email">
         <i class="fa-solid fa-envelope"></i>
-        <h2>Email</h2>
+        <a href="./email/email.php"><h2>Email</h2></a>
     </div>
 
 

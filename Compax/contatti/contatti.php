@@ -14,6 +14,7 @@
         rel="stylesheet">
 
 
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://kit.fontawesome.com/bfed2c6a00.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -31,7 +32,7 @@
                     <a class="aNav" href="../homepage/index.php#diploma">Disploma</a>
                     <a class="aNav" href="../homepage/index.php#percorsi">Medie</a>
                     <a class="aNav" href="#">Statistiche</a>
-                    <a class="aNav" href="#">Chi siamo</a>
+                    <a class="aNav" href="../chi siamo/chiSiamo.php">Chi siamo</a>
                     <a class="aNav" href="../contatti/contatti.php">Contatti</a>
                 </div>
 

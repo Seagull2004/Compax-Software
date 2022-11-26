@@ -287,7 +287,7 @@
     </footer>
 
 
-    <script src="js/panino.js"></script>
+    <script src="../homepage/panino.js"></script>
 </body>
 
 </html>
