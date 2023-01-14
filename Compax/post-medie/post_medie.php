@@ -34,10 +34,10 @@
 
 
         <hr>
-        <form action="#">
-            <input type="text" name="nomeStudente" id="nomeStudente" placeholder="Nome">
+        <form action="domande_medie.php">
+            <input required type="text" name="nomeStudente" id="nomeStudente" placeholder="Nome">
 
-            <select id="regioni" name="regioni" onchange="cambioRegione(this.options[this.selectedIndex].innerHTML)">
+            <select required id="regioni" name="regioni" onchange="cambioRegione(this.options[this.selectedIndex].innerHTML)">
                 <option value disabled selected>Regione</option>
                 <?php while($row3 = mysqli_fetch_assoc($regioni)):; ?>
                     <option> 
@@ -46,7 +46,7 @@
                 <?php endwhile;?>
             </select>
 
-            <select id="provincie" onchange="cambioProvincia(this.options[this.selectedIndex].innerHTML)">
+            <select required id="provincie" onchange="cambioProvincia(this.options[this.selectedIndex].innerHTML)">
                 <option value disabled selected>Provincia</option>
                 <?php while($row2 = mysqli_fetch_array($provincie)):; ?>
                     <option> 
@@ -55,7 +55,7 @@
                 <?php endwhile;?>
             </select>
 
-            <select id="comuni" onchange="cambioComune(this.options[this.selectedIndex].innerHTML)">
+            <select required id="comuni" onchange="cambioComune(this.options[this.selectedIndex].innerHTML)">
                 <option value disabled selected>
                     Comune
                 </option>
@@ -66,7 +66,7 @@
                 <?php endwhile;?>
             </select>
 
-            <select id="scuole" onchange="cambioScuola(this.options[this.selectedIndex].value)">
+            <select required id="scuole" onchange="cambioScuola(this.options[this.selectedIndex].value)">
                 <option value disabled selected>
                     Scuola
                 </option>
@@ -76,8 +76,15 @@
                     </option>
                 <?php endwhile;?>
             </select>
-        </form>
 
+            <submit>
+                <button>
+                    <div><i class="fa-solid fa-arrow-right"></i></div>
+                    Avanti
+                </button>
+            </submit>
+        </form>
+        
     </section>
 </body>
 </html>
