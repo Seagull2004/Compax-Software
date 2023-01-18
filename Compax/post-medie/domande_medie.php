@@ -34,6 +34,7 @@
             success: function(data) 
             {
                 risposte = JSON.parse(data)
+                generaForm();
             }
         });
 
@@ -41,17 +42,32 @@
         {
             domande.forEach(function(item, i)
             {
-                $('#domande_medie').append("<h1>" + item.domanda + "</h1>")
+                $('.content').append("<h1 style='text-align: center; padding-top: 2%;'> Domanda " + i + "</h1>")
+                $('.content').append("<label style='font-family: system-ui, sans-serif; font-size: 1.5rem; font-weight: bold;'>" + item.domanda + "</label>")
                 risposte.forEach(function(itemRisposte, iRisposte)
                 {
                     if(item.id_domanda == itemRisposte.id_domanda)
                     {
-                        $('#domande_medie').append("<span value='" + itemRisposte.id_risposta + "'>" + itemRisposte.risposta + "</span>")
+                        $('.content').append("<label class='container' value='" + itemRisposte.id_risposta + "'>" + itemRisposte.risposta + "<input type='checkbox'><span class='checkmark'></span></label>")
                     }
                 })
+                $('.content').append("<hr></hr>")
             })
         }
+
     </script>
+    <style>
+        .header{
+            background-color: rgb(245, 240, 240);
+            border-radius: 10px;
+            overflow: Auto;
+            background-color: #EEEEEE;
+            height: 600px;
+            scrollbar-base-color: #2da8ff;
+            scrollbar-arrow-color: #CCCCCC;
+            scrollbar-track-color: #CCCCCC;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,18 +76,41 @@
             <div class="width"></div>
         </div>
 
-        <img src="../img/cappelloViola.png" alt="" class="cappelloViola">
+        <!--<img src="../img/cappelloViola.png" alt="" class="cappelloViola">-->
         <img src="../img/diploma.png" alt="" class="diploma">
         <img src="../img/mappamondo.png" alt="" class="mappamondo">
 
-        <div class="header">
-            <h1>Domanda 1/?</h1>
-            <p>Inserisci il tuo nome e la scuola che hai frequentato</p>
-        </div>
-        
-        <form id="domande_medie">
-
+        <form class="form">
+            <div class="header">
+                <div class="content">
+                </div>
+            </div>
         </form>
+
+        <!--<form class="form">
+            <div class="header">
+                <h1>Domanda 1</h1>
+                <div class="content">
+                    <label class="form-control">Quale tra le seguenti riviste leggi o ti piacerebbe leggere? </label>
+                    <label class="container">One
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Two
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Three
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Four
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </form>-->
 
     </section>
 </body>
