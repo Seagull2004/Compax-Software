@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +33,7 @@
             success: function(data) 
             {
                 risposte = JSON.parse(data)
-                generaForm();
+                setTimeout(generaForm(), 100)
             }
         });
 
@@ -48,7 +47,17 @@
                 {
                     if(item.id_domanda == itemRisposte.id_domanda)
                     {
-                        $('.content').append("<label class='container' value='" + itemRisposte.id_risposta + "'>" + itemRisposte.risposta + "<input type='checkbox'><span class='checkmark'></span></label>")
+                        $('.content').append(
+                            "<label class='container' value='" + 
+                            itemRisposte.id_risposta + 
+                            "'>" + 
+                            itemRisposte.risposta + 
+                            "<input type='checkbox' name='" + 
+                            itemRisposte.id_risposta + 
+                            "' value = '" + 
+                            itemRisposte.risposta +
+                            "'><span class='checkmark'></span></label>"
+                        )
                     }
                 })
                 $('.content').append("<hr></hr>")
@@ -80,10 +89,27 @@
         <img src="../img/diploma.png" alt="" class="diploma">
         <img src="../img/mappamondo.png" alt="" class="mappamondo">
 
-        <form class="form">
+        <form class="form" method="POST" action="risultati_medie.php">
             <div class="header">
+                <div>Benvenuto</div>
+                <input type="text" name="nomeStudente" value="<?php echo $_POST["nomeStudente"]?>">
+                <div>
+                    Frequentante la scuola 
+                    <input type="text" name="scuole" value="<?php echo $_POST["scuole"]?>">
+                    di 
+                    <input type="text" name="comuni" value="<?php echo $_POST["comuni"]?>">
+                    in procincia di
+                    <input type="text" name="provincie" value="<?php echo $_POST["provincie"]?>">
+                    ,
+                    <input type="text" name="regioni" value="<?php echo $_POST["regioni"]?>">
+                </div>
                 <div class="content">
                 </div>
+                <submit>
+                    <button>
+                        Invia
+                    </button>
+                </submit>
             </div>
         </form>
 

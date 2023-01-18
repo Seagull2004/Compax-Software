@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<body>
+    <span>Ecco i tuoi risultati</span>
+    <br>
+    <br>
+
+    <?php
+        $serverName = "localhost";
+        $dbUsername = "root";
+        $dbPassword = "";
+        $dbName = "compax_software";
+
+        $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
+
+        if(!$conn)
+        {
+            die("Connessione fallita: " . mysqli_connect_error());
+        }
+
+        $sqlRisposteMedie = "SELECT DISTINCT id_risposta, id_domanda, risposta, punti_liceo_sportivo, punti_conservatorio, punti_istituto_professionale, punti_istituto_tecnico	punti_liceo_scientifico, punti_liceo_classico, punti_scienze_umane, punti_istituto_tecnico_turistico, punti_professionale_sociale, punti_liceo_linguistico FROM risposte_medie";
+
+
+        $nome = $_POST["nomeStudente"];
+        $regione = $_POST["regioni"];
+        $provincia = $_POST["provincie"];
+        $comune = $_POST["comuni"];
+        $id_scuola = $_POST["scuole"];
+
+        $primo_istituto_adatto = "";
+        $pt_primo_istituto_adatto = "";
+        $secondo_istituto_adatto = "";
+        $pt_secondo_istituto_adatto = "";
+        $terzo_istituto_adatto = "";
+        $pt_terzo_istituto_adatt = "";
+
+        // Dopo aver trovato gli id di tutte le risposte date modifico la query in modo tale da richiedere una tabelle con le sole risposte di interesse
+        $i == 0;
+        $arrayRisposteDate = array();
+        foreach ($_POST as $key => $value) 
+        {
+            $i++;
+            if($i > 5)
+                array_push($arrayRisposteDate, $key);
+        }
+        foreach ($arrayRisposteDate as $key => $value) 
+        {
+            if($key != 0)
+            {
+                $sqlRisposteMedie .= " OR id_risposta = " . $value;
+            }
+            else
+            {
+                $sqlRisposteMedie .= " WHERE id_risposta = " . $value;
+            }
+            
+        }
+
+
+        $risposteMedie = mysqli_query($conn, $sqlRisposteMedie);
+        $arrayRisposteMedie = array();
+
+        while($row = mysqli_fetch_assoc($risposteMedie))
+        {
+            $arrayRisposteMedie[] = $row;
+        }
+
+        print_r($arrayRisposteMedie)
+    ?>
+</body>
+</html>

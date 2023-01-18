@@ -34,7 +34,7 @@
 
 
         <hr>
-        <form action="domande_medie.php">
+        <form action="domande_medie.php" method="POST">
             <input required type="text" name="nomeStudente" id="nomeStudente" placeholder="Nome">
 
             <select required id="regioni" name="regioni" onchange="cambioRegione(this.options[this.selectedIndex].innerHTML)">
@@ -46,7 +46,7 @@
                 <?php endwhile;?>
             </select>
 
-            <select required id="provincie" onchange="cambioProvincia(this.options[this.selectedIndex].innerHTML)">
+            <select required id="provincie" name="provincie" onchange="cambioProvincia(this.options[this.selectedIndex].innerHTML)">
                 <option value disabled selected>Provincia</option>
                 <?php while($row2 = mysqli_fetch_array($provincie)):; ?>
                     <option> 
@@ -55,7 +55,7 @@
                 <?php endwhile;?>
             </select>
 
-            <select required id="comuni" onchange="cambioComune(this.options[this.selectedIndex].innerHTML)">
+            <select required id="comuni" name="comuni" onchange="cambioComune(this.options[this.selectedIndex].innerHTML)">
                 <option value disabled selected>
                     Comune
                 </option>
@@ -66,7 +66,7 @@
                 <?php endwhile;?>
             </select>
 
-            <select required id="scuole" onchange="cambioScuola(this.options[this.selectedIndex].value)">
+            <select required id="scuole" name="scuole" onchange="cambioScuola(this.options[this.selectedIndex].value)">
                 <option value disabled selected>
                     Scuola
                 </option>
