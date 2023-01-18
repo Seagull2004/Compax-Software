@@ -25,21 +25,8 @@
             die("Connessione fallita: " . mysqli_connect_error());
         }
 
-        $sqlRisposteMedie = "SELECT DISTINCT id_risposta, id_domanda, risposta, punti_liceo_sportivo, punti_conservatorio, punti_istituto_professionale, punti_istituto_tecnico	punti_liceo_scientifico, punti_liceo_classico, punti_scienze_umane, punti_istituto_tecnico_turistico, punti_professionale_sociale, punti_liceo_linguistico FROM risposte_medie";
+        $sqlRisposteMedie = "SELECT punti_liceo_sportivo, punti_conservatorio, punti_istituto_professionale, punti_istituto_tecnico	punti_liceo_scientifico, punti_liceo_classico, punti_scienze_umane, punti_istituto_tecnico_turistico, punti_professionale_sociale, punti_liceo_linguistico FROM risposte_medie";
 
-
-        $nome = $_POST["nomeStudente"];
-        $regione = $_POST["regioni"];
-        $provincia = $_POST["provincie"];
-        $comune = $_POST["comuni"];
-        $id_scuola = $_POST["scuole"];
-
-        $primo_istituto_adatto = "";
-        $pt_primo_istituto_adatto = "";
-        $secondo_istituto_adatto = "";
-        $pt_secondo_istituto_adatto = "";
-        $terzo_istituto_adatto = "";
-        $pt_terzo_istituto_adatt = "";
 
         // Dopo aver trovato gli id di tutte le risposte date modifico la query in modo tale da richiedere una tabelle con le sole risposte di interesse
         $i == 0;
@@ -63,16 +50,94 @@
             
         }
 
-
         $risposteMedie = mysqli_query($conn, $sqlRisposteMedie);
         $arrayRisposteMedie = array();
-
         while($row = mysqli_fetch_assoc($risposteMedie))
         {
             $arrayRisposteMedie[] = $row;
         }
 
-        print_r($arrayRisposteMedie)
+        $punteggiIstituti = array();
+        foreach ($arrayRisposteMedie[0] as $key => $value) 
+        {
+            $punteggiIstituti[$key] = 0;
+        }
+        
+        foreach($punteggiIstituti as $key => $value)
+        {
+            // echo "adesso analizzo i " . $key . "<br>";
+            foreach ($arrayRisposteMedie as $key2 => $value2) 
+            {
+                foreach ($value2 as $key3 => $value3) 
+                {
+                    if($key == $key3)
+                    {
+                        // echo $value . " + " . $value3 . " = ";
+                        $value = $value + $value3;
+                        // echo $value . "<br>";
+                    }
+                }
+            }
+            $punteggiIstituti[$key] = $value;
+        }
+
+        asort($punteggiIstituti);
+        $punteggiIstituti = array_reverse($punteggiIstituti);
+
+
+        $nome = $_POST["nomeStudente"];
+        $regione = $_POST["regioni"];
+        $provincia = $_POST["provincie"];
+        $comune = $_POST["comuni"];
+        $id_scuola = $_POST["scuole"];
+
+        $primo_istituto_adatto = "";
+        $pt_primo_istituto_adatto = "";
+        $secondo_istituto_adatto = "";
+        $pt_secondo_istituto_adatto = "";
+        $terzo_istituto_adatto = "";
+        $pt_terzo_istituto_adatto = "";
+
+        $i = 0;
+        foreach ($punteggiIstituti as $key => $value) 
+        {
+            if($i == 0)
+            {
+                $primo_istituto_adatto = $key;
+                $pt_primo_istituto_adatto = $value;
+            }
+            else if($i == 1)
+            {
+                $secondo_istituto_adatto = $key;
+                $pt_secondo_istituto_adatto = $value;
+            }
+            else if($i == 2)
+            {
+                $terzo_istituto_adatto = $key;
+                $pt_terzo_istituto_adatto = $value;
+            }
+            else
+            {
+                break;
+            }
+            $i++;
+        }
+
+        echo $nome . "<br>";
+        echo $regione . "<br>";
+        echo $provincia . "<br>";
+        echo $comune . "<br>";
+        echo $id_scuola . "<br><br>";
+
+        echo "1 Scelta <br>";
+        echo $primo_istituto_adatto . "<br>";
+        echo $pt_primo_istituto_adatto . " pt<br><br>";
+        echo "2 Scelta <br>";
+        echo $secondo_istituto_adatto . "<br>";
+        echo $pt_secondo_istituto_adatto . " pt<br><br>";
+        echo "3 Scelta <br>";
+        echo $terzo_istituto_adatto . "<br>";
+        echo $pt_terzo_istituto_adatto . " pt<br><br>";
     ?>
 </body>
 </html>
