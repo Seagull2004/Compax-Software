@@ -123,12 +123,29 @@
             $i++;
         }
 
+
+
+        $sqlInsert = 'INSERT INTO risultati_medie (Nome, Regione, Provincia, Comune, id_scuola, primo_istituto_adatto, pt_primo_istituto_adatto, secondo_istituto_adatto, pt_secondo_istituto_adatto, terzo_istituto_adatto, pt_terzo_istituto_adatto)
+        VALUES ( "' . $nome .'", "' . $regione .'", "' . $provincia .'", "' . $comune .'", "' . $id_scuola .'", "' . $primo_istituto_adatto .'", "' . $pt_primo_istituto_adatto .'", "' . $secondo_istituto_adatto .'", "' . $pt_secondo_istituto_adatto .'", "' . $terzo_istituto_adatto .'", "' . $pt_terzo_istituto_adatto .'")';
+
+
+        if ($conn->query($sqlInsert) === TRUE) 
+        {
+            echo "New record created successfully";
+        } 
+        else
+         {
+            echo "Error: " . $sqlInsert . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+
+
         echo $nome . "<br>";
         echo $regione . "<br>";
         echo $provincia . "<br>";
         echo $comune . "<br>";
         echo $id_scuola . "<br><br>";
-
         echo "1 Scelta <br>";
         echo $primo_istituto_adatto . "<br>";
         echo $pt_primo_istituto_adatto . " pt<br><br>";
