@@ -19,35 +19,19 @@ if(!isset($_SESSION['admin'])){
 </head>
 
 <body>
-
     <nav>
         <div class="contenitore">
             <h4>Compax Software</h4>
-
             <div class="opzioni">
-                <a href="../adminLogin/login-out/logout.php">Esci</a>
+              <a href="../adminLogin/login-out/logout.php">Esci</a>
             </div>
         </div>
     </nav>
 
-    <div class="menu">
-        <div class="statistiche">
-            <i class="fa-solid fa-chart-simple"></i>
-            <h2>Statistiche</h2>
-        </div>
 
-        <div class="messaggi">
-            <i class="fa-solid fa-messages-question"></i>
-            <h2>Messaggi</h2>
-        </div>
+    <div>
 
     </div>
-
-    <div class="email">
-        <i class="fa-solid fa-envelope"></i>
-        <a href="./email/email.php"><h2>Email</h2></a>
-    </div>
-
 
 
 </body>

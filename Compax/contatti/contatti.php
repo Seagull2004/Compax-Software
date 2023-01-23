@@ -151,8 +151,8 @@
 
 
         <div class="copyright">
-            <p>© 2022 Compax Software - All rights reserved</p>
-            <p>Boh non lo so qualcosa bella</p>
+            <p>© 2023 Compax Software - All rights reserved</p>
+            <p>Compax Software - P.IVA 01234567890 - Cap. Soc. 50.000,00 €</p>
         </div>
 
     </footer>

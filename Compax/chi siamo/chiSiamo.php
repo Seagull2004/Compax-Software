@@ -86,8 +86,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet facilisis neque. Aliquam posuere
                     varius est, eu fermentum lacus fringilla quis. </p>
                 <div class="content-mail">
-                    <input type="mail" placeholder="Inserisci la tua mail">
-                    <button>Contattaci</button>
+                    <input type="mail" placeholder="Inserisci la tua mail" name="email" id="email" required>
+                    <button class="contattaci">Contattaci</button>
                 </div>
             </div>
             <div class="immagine">
@@ -110,12 +110,11 @@
                             <img src="../img/mattia.jpeg" alt="Team Image">
                         </div>
                         <div class="team-content">
-                            <h2>Steven</h2>
-                            <h3>CEO & Founder</h3>
+                            <h2>Michele Ongaro</h2>
+                            <h3>Project Manager</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet facilisis neque.
                                 Aliquam posuere varius est, eu fermentum lacus fringilla quis.Vivamus rutrum, enim at
                                 congue tempor, neque turpis aliquam lacus, sed consectetur diam diam quis mauris.</p>
-                            <h4>abc@gmail.com</h4>
                             <div class="team-social">
                                 <a href="#" class="social-tw"> <i class="fab fa-twitter"></i></a>
                                 <a href="#" class="social-fb"> <i class="fab fa-facebook-f"></i></a>
@@ -133,12 +132,11 @@
                             <img src="../img/mattia.jpeg" alt="Team Image">
                         </div>
                         <div class="team-content">
-                            <h2>Mayra</h2>
-                            <h3>Art Director</h3>
+                            <h2>Melissa Olmi</h2>
+                            <h3>Developer and Graphic Desing</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet facilisis neque.
                                 Aliquam posuere varius est, eu fermentum lacus fringilla quis.Vivamus rutrum, enim at
                                 congue tempor, neque turpis aliquam lacus, sed consectetur diam diam quis mauris.</p>
-                            <h4>abc@gmail.com</h4>
                             <div class="team-social">
                                 <a href="#" class="social-tw"> <i class="fab fa-twitter"></i></a>
                                 <a href="#" class="social-fb"> <i class="fab fa-facebook-f"></i></a>
@@ -156,12 +154,11 @@
                             <img src="../img/mattia.jpeg" alt="Team Image">
                         </div>
                         <div class="team-content">
-                            <h2>John</h2>
+                            <h2>Mattia Groppo</h2>
                             <h3>Developer</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet facilisis neque.
                                 Aliquam posuere varius est, eu fermentum lacus fringilla quis.Vivamus rutrum, enim at
                                 congue tempor, neque turpis aliquam lacus, sed consectetur diam diam quis mauris.</p>
-                            <h4>abc@gmail.com</h4>
                             <div class="team-social">
                                 <a href="#" class="social-tw"> <i class="fab fa-twitter"></i></a>
                                 <a href="#" class="social-fb"> <i class="fab fa-facebook-f"></i></a>
@@ -179,12 +176,11 @@
                             <img src="../img/mattia.jpeg" alt="Team Image">
                         </div>
                         <div class="team-content">
-                            <h2>Jennifer</h2>
-                            <h3>Designer</h3>
+                            <h2>Giovanni Tonzig</h2>
+                            <h3>Developer</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet facilisis neque.
                                 Aliquam posuere varius est, eu fermentum lacus fringilla quis.Vivamus rutrum, enim at
                                 congue tempor, neque turpis aliquam lacus, sed consectetur diam diam quis mauris.</p>
-                            <h4>abc@gmail.com</h4>
                             <div class="team-social">
                                 <a href="#" class="social-tw"> <i class="fab fa-twitter"></i></a>
                                 <a href="#" class="social-fb"> <i class="fab fa-facebook-f"></i></a>
@@ -280,8 +276,8 @@
 
 
         <div class="copyright">
-            <p>© 2022 Compax Software - All rights reserved</p>
-            <p>Boh non lo so qualcosa bella</p>
+            <p>© 2023 Compax Software - All rights reserved</p>
+            <p>Compax Software - P.IVA 01234567890 - Cap. Soc. 50.000,00 €</p>
         </div>
 
     </footer>

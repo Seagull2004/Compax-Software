@@ -267,6 +267,7 @@ margin-bottom: 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
+    margin-top: 5%;
 }
 .team .team-social{
     width: 100%;
@@ -401,8 +402,8 @@ margin-bottom: 0;
     outline: none;
 }
 
-.content-mail button{
-    padding: 2%;
+.contattaci {
+    padding: 3%;
     border: none;
     border-radius: 10px;
     background-color: #5991FF;

@@ -87,9 +87,9 @@
             <div class="form">
                 <p>Su che percorso sei indeciso?</p>
                 <div class="bottoni">
-                    <a href="#">Università</a>
+                    <a href="http://corndog.io/">Università</a>
                     <a href="../post-medie/post_medie.php">Medie</a>
-                </div>  
+                </div>
 
             </div>
             <div class="immagine">
@@ -274,8 +274,8 @@
                     <li><a href="#diploma">Post-diploma</a></li>
                     <li><a href="#percorsi">Post-medie</a></li>
                     <li><a href="#percorsi">Statistiche</a></li>
-                    <li><a href="#">Chi siamo</a></li>
-                    <li><a href="#">Contatti</a></li>
+                    <li><a href="../chi siamo/chiSiamo.php">Chi siamo</a></li>
+                    <li><a href="../contatti/contatti.php">Contatti</a></li>
                 </ul>
             </div>
 
@@ -317,8 +317,8 @@
 
 
         <div class="copyright">
-            <p>© 2022 Compax Software - All rights reserved</p>
-            <p>Boh non lo so qualcosa bella</p>
+            <p>© 2023 Compax Software - All rights reserved</p>
+            <p>Compax Software - P.IVA 01234567890 - Cap. Soc. 50.000,00 € </p>
         </div>
 
     </footer>

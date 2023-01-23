@@ -19,14 +19,17 @@
 
 
 nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    padding: 16px 32px;
-    height: 75px;
-    background-color: #4e7dc8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 16px 32px;
+  height: 75px;
+
+  /*---GLASSMORPHISM EFFECT---*/
+  background: rgb(89, 144, 255);
+  border: 1px solid rgb(89, 144, 255);
 }
 
 h4{
@@ -40,52 +43,54 @@ nav a{
 }
 
 
+.sidebar {
+    width: 250px;
+    background: #f6f6f6;
+    margin: 10% 0 0 1%;
+    height: 400px;
+    border-radius: 15px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    color: blue;
+  }
 
-.menu{
+
+  .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: auto;
-}
-
-
-.statistiche, .messaggi{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgb(243, 243, 243);
-    width: 15%;
-    padding: 1%;
-    box-shadow: 11px 11px 15px -3px rgba(0,0,0,0.1);
-    border-radius: 15px;
-    cursor: pointer;
-    margin-top: 15%;
-}
-
-.statistiche .fa-chart-simple, .messaggi .fa-messages-question, .email .fa-envelope{
-    color: #4e7dc8;
-    font-size: 1.5rem;
-}
-
-.statistiche h2, .messaggi h2, .email h2{
-    font-weight: 300;
-    font-size: 20px;
-    margin-left: 1rem;
-}
-
-.email{
+  }
+  
+  .item {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: rgb(243, 243, 243);
-    width: 15%;
-    padding: 1%;
-    box-shadow: 11px 11px 15px -3px rgba(0,0,0,0.1);
-    border-radius: 15px;
-    cursor: pointer;
-    margin: auto;
-    margin-top: 5%;
+    margin: 0 10px;
+  }
+  
+  .item p {
+    margin-top: 10px;
+  }
 
-}
+
+  
+  
+  
