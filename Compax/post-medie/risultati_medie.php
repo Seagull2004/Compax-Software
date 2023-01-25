@@ -5,13 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Document</title>
+    <title>Scuola adatta</title>
+    <link rel="stylesheet" href="risultati_medie.css">
 </head>
 <body>
-    <span>Ecco i tuoi risultati</span>
-    <br>
-    <br>
-
     <?php
         $serverName = "localhost";
         $dbUsername = "root";
@@ -29,7 +26,7 @@
 
 
         // Dopo aver trovato gli id di tutte le risposte date modifico la query in modo tale da richiedere una tabelle con le sole risposte di interesse
-        $i == 0;
+        $i = 0;
         $arrayRisposteDate = array();
         foreach ($_POST as $key => $value) 
         {
@@ -131,7 +128,7 @@
 
         if ($conn->query($sqlInsert) === TRUE) 
         {
-            echo "New record created successfully";
+            echo " ";
         } 
         else
          {
@@ -139,22 +136,50 @@
         }
 
         $conn->close();
-
-
-        echo $nome . "<br>";
-        echo $regione . "<br>";
-        echo $provincia . "<br>";
-        echo $comune . "<br>";
-        echo $id_scuola . "<br><br>";
-        echo "1 Scelta <br>";
-        echo $primo_istituto_adatto . "<br>";
-        echo $pt_primo_istituto_adatto . " pt<br><br>";
-        echo "2 Scelta <br>";
-        echo $secondo_istituto_adatto . "<br>";
-        echo $pt_secondo_istituto_adatto . " pt<br><br>";
-        echo "3 Scelta <br>";
-        echo $terzo_istituto_adatto . "<br>";
-        echo $pt_terzo_istituto_adatto . " pt<br><br>";
     ?>
+
+    <section>
+        <div class="bar">
+            <div class="width"></div>
+        </div>
+
+
+        <img src="../img/cappelloViola.png" alt="" class="cappelloViola">
+        <img src="../img/diploma.png" alt="" class="diploma">
+        <img src="../img/mappamondo.png" alt="" class="mappamondo">
+        <div class="header">
+            <div class="title">
+                <div class="title-title">
+                    <h1 style="display: flex; float: left;">Benvenuto</h1><input type="text" class="inputNome" value="<?php echo $nome?>">
+                </div>
+                <div class="title-content">
+                    <h3>Di seguito sono riportate le scuole che sono risultate più idonee alla tua persona: </h3>
+                    <h3>Scelta 1:</h3>
+                    <div class="pallino"></div>
+                    <p class="scelta">La scelta più adatta è il:<p>
+                    <input type="text" class="input" value="<?php echo $primo_istituto_adatto?>">
+                    <p style="display: flex; float:left;"> con un punteggio di</p> 
+                    <input type="number" class="inputPunti" value="<?php echo $pt_primo_istituto_adatto?>">
+                    <p>punti</p>
+                    <h3>Scelta 2:</h3>
+                    <div class="pallino"></div>
+                    <p class="scelta">La scelta più adatta è il:<p>
+                    <input type="text" class="input" value="<?php echo $secondo_istituto_adatto?>">
+                    <p style="display: flex; float:left;"> con un punteggio di</p> 
+                    <input type="number" class="inputPunti" value="<?php echo $pt_secondo_istituto_adatto?>">
+                    <p>punti</p>
+                    <h3>Scelta 3:</h3>
+                    <div class="pallino"></div>
+                    <p class="scelta">La scelta più adatta è il:<p>
+                    <input type="text" class="input" value="<?php echo $terzo_istituto_adatto?>">
+                    <p style="display: flex; float:left;"> con un punteggio di</p> 
+                    <input type="number" class="inputPunti" value="<?php echo $pt_terzo_istituto_adatto?>">
+                    <p>punti</p>
+                </div>
+                <button class="button-19" role="button" onclick="location.href=''">Homepage</button>
+                <button class="button-19" role="button">Stampa</button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
