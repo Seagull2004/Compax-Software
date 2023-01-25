@@ -176,7 +176,7 @@
                     <input type="number" class="inputPunti" value="<?php echo $pt_terzo_istituto_adatto?>">
                     <p>punti</p>
                 </div>
-                <button class="button-19" role="button" onclick="location.href=''">Homepage</button>
+                <button class="button-19" role="button" onclick="location.href=''"> Homepage</button>
                 <button class="button-19" role="button">Stampa</button>
             </div>
         </div>
