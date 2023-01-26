@@ -27,6 +27,7 @@
              
             }
         });
+
         const promise2 =  $.ajax({
             url: "../php/queryRisposteMedie.php",
             type: "POST",
@@ -38,15 +39,11 @@
             }
         });
 
-        Promise.all([promise1, promise2]).then(function(response1, response2) {
-        generaForm()
+        Promise.all([promise1, promise2]).then(function(response1, response2) 
+        {
+            generaForm()
         });
-
-       
-
-       
         
-
         function generaForm()
         {
             domande.forEach(function(item, i)
@@ -154,7 +151,7 @@
         <img src="../img/diploma.png" alt="" class="diploma">
         <img src="../img/mappamondo.png" alt="" class="mappamondo">
 
-        <form class="form" method="POST" action="risultati_medie.php">
+        <form class="form" method="POST" action="./inserisci_risultati_medie.php">
             <div class="header">
             <div>Benvenuto</div>
                 <input type="text" style="border-color: red;" class='risultatiMedie' name="nomeStudente" value="<?php echo $_POST["nomeStudente"]?>" readonly>

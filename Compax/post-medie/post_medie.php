@@ -1,7 +1,7 @@
 <?php
+    include_once("../php/generalConfig.php");
     include_once("../php/config.php");
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,15 +1,5 @@
 <?php
-$serverName = "localhost:3307";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "compax_software";
-
-$conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
-
-if(!$conn)
-{
-    die("Connessione fallita: " . mysqli_connect_error());
-}
+include_once("./generalConfig.php");
 
 $sqlRegioni = "SELECT DISTINCT Regione FROM scuole ORDER BY `scuole`.`Regione` ASC";
 $sqlProvincia = "SELECT DISTINCT Provincia FROM scuole ORDER BY `scuole`.`Provincia` ASC";

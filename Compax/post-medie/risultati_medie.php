@@ -10,21 +10,10 @@
 </head>
 <body>
     <?php
-        $serverName = "localhost";
-        $dbUsername = "root";
-        $dbPassword = "";
-        $dbName = "compax_software";
-
-        $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
-
-        if(!$conn)
-        {
-            die("Connessione fallita: " . mysqli_connect_error());
-        }
+        include_once("../php/generalConfig.php");
 
         $sqlRisposteMedie = "SELECT punti_liceo_sportivo, punti_conservatorio, punti_istituto_professionale, punti_istituto_tecnico	punti_liceo_scientifico, punti_liceo_classico, punti_scienze_umane, punti_istituto_tecnico_turistico, punti_professionale_sociale, punti_liceo_linguistico FROM risposte_medie";
-
-
+        
         // Dopo aver trovato gli id di tutte le risposte date modifico la query in modo tale da richiedere una tabelle con le sole risposte di interesse
         $i = 0;
         $arrayRisposteDate = array();
@@ -44,16 +33,15 @@
             {
                 $sqlRisposteMedie .= " WHERE id_risposta = " . $value;
             }
-            
         }
-
+        
         $risposteMedie = mysqli_query($conn, $sqlRisposteMedie);
         $arrayRisposteMedie = array();
         while($row = mysqli_fetch_assoc($risposteMedie))
         {
             $arrayRisposteMedie[] = $row;
         }
-
+        
         $punteggiIstituti = array();
         foreach ($arrayRisposteMedie[0] as $key => $value) 
         {
@@ -77,24 +65,23 @@
             }
             $punteggiIstituti[$key] = $value;
         }
-
+        
         asort($punteggiIstituti);
         $punteggiIstituti = array_reverse($punteggiIstituti);
 
-
-        $nome = $_POST["nomeStudente"];
-        $regione = $_POST["regioni"];
-        $provincia = $_POST["provincie"];
-        $comune = $_POST["comuni"];
-        $id_scuola = $_POST["scuole"];
-
+        $nome = $_GET["nomeStudente"];
+        $regione = $_GET["regioni"];
+        $provincia = $_GET["provincie"];
+        $comune = $_GET["comuni"];
+        $id_scuola = $_GET["scuole"];
+        
         $primo_istituto_adatto = "";
         $pt_primo_istituto_adatto = "";
         $secondo_istituto_adatto = "";
         $pt_secondo_istituto_adatto = "";
         $terzo_istituto_adatto = "";
         $pt_terzo_istituto_adatto = "";
-
+        
         $i = 0;
         foreach ($punteggiIstituti as $key => $value) 
         {
@@ -119,22 +106,7 @@
             }
             $i++;
         }
-
-
-
-        $sqlInsert = 'INSERT INTO risultati_medie (Nome, Regione, Provincia, Comune, id_scuola, primo_istituto_adatto, pt_primo_istituto_adatto, secondo_istituto_adatto, pt_secondo_istituto_adatto, terzo_istituto_adatto, pt_terzo_istituto_adatto)
-        VALUES ( "' . $nome .'", "' . $regione .'", "' . $provincia .'", "' . $comune .'", "' . $id_scuola .'", "' . $primo_istituto_adatto .'", "' . $pt_primo_istituto_adatto .'", "' . $secondo_istituto_adatto .'", "' . $pt_secondo_istituto_adatto .'", "' . $terzo_istituto_adatto .'", "' . $pt_terzo_istituto_adatto .'")';
-
-
-        if ($conn->query($sqlInsert) === TRUE) 
-        {
-            echo " ";
-        } 
-        else
-         {
-            echo "Error: " . $sqlInsert . "<br>" . $conn->error;
-        }
-
+        
         $conn->close();
     ?>
 
@@ -142,7 +114,6 @@
         <div class="bar">
             <div class="width"></div>
         </div>
-
 
         <img src="../img/cappelloViola.png" alt="" class="cappelloViola">
         <img src="../img/diploma.png" alt="" class="diploma">

@@ -1,15 +1,5 @@
 <?php
-$serverName = "localhost:3307";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "compax_software";
-
-$conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
-
-if(!$conn)
-{
-    die("Connessione fallita: " . mysqli_connect_error());
-}
+include_once("./generalConfig.php");
 
 $sqlRisposteMedie = "SELECT DISTINCT id_risposta, id_domanda, risposta, punti_liceo_sportivo, punti_conservatorio, punti_istituto_professionale, punti_istituto_tecnico	punti_liceo_scientifico, punti_liceo_classico, punti_scienze_umane, punti_istituto_tecnico_turistico, punti_professionale_sociale, punti_liceo_linguistico FROM risposte_medie";
 
