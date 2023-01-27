@@ -616,7 +616,7 @@ if(!isset($_SESSION['admin'])){
       var data = [];
       istitutiCount.forEach(function(item, i)
       {
-        data.push({label:item.name, y:item.count})
+        data.push({label:item.name.replace("punti_", "").replace("_", " "), y:item.count})
       });
 
       // adesso che ho i dati a disposizione inserisco li inserisco nel grafico
