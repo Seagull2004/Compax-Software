@@ -10,104 +10,17 @@
 </head>
 <body>
     <?php
-        include_once("../php/generalConfig.php");
-
-        $sqlRisposteMedie = "SELECT punti_liceo_sportivo, punti_conservatorio, punti_istituto_professionale, punti_istituto_tecnico	punti_liceo_scientifico, punti_liceo_classico, punti_scienze_umane, punti_istituto_tecnico_turistico, punti_professionale_sociale, punti_liceo_linguistico FROM risposte_medie";
-        
-        // Dopo aver trovato gli id di tutte le risposte date modifico la query in modo tale da richiedere una tabelle con le sole risposte di interesse
-        $i = 0;
-        $arrayRisposteDate = array();
-        foreach ($_POST as $key => $value) 
-        {
-            $i++;
-            if($i > 5)
-                array_push($arrayRisposteDate, $key);
-        }
-        foreach ($arrayRisposteDate as $key => $value) 
-        {
-            if($key != 0)
-            {
-                $sqlRisposteMedie .= " OR id_risposta = " . $value;
-            }
-            else
-            {
-                $sqlRisposteMedie .= " WHERE id_risposta = " . $value;
-            }
-        }
-        
-        $risposteMedie = mysqli_query($conn, $sqlRisposteMedie);
-        $arrayRisposteMedie = array();
-        while($row = mysqli_fetch_assoc($risposteMedie))
-        {
-            $arrayRisposteMedie[] = $row;
-        }
-        
-        $punteggiIstituti = array();
-        foreach ($arrayRisposteMedie[0] as $key => $value) 
-        {
-            $punteggiIstituti[$key] = 0;
-        }
-        
-        foreach($punteggiIstituti as $key => $value)
-        {
-            // echo "adesso analizzo i " . $key . "<br>";
-            foreach ($arrayRisposteMedie as $key2 => $value2) 
-            {
-                foreach ($value2 as $key3 => $value3) 
-                {
-                    if($key == $key3)
-                    {
-                        // echo $value . " + " . $value3 . " = ";
-                        $value = $value + $value3;
-                        // echo $value . "<br>";
-                    }
-                }
-            }
-            $punteggiIstituti[$key] = $value;
-        }
-        
-        asort($punteggiIstituti);
-        $punteggiIstituti = array_reverse($punteggiIstituti);
-
-        $nome = $_GET["nomeStudente"];
+        $nome = $_GET["nome"];
         $regione = $_GET["regioni"];
         $provincia = $_GET["provincie"];
         $comune = $_GET["comuni"];
         $id_scuola = $_GET["scuole"];
-        
-        $primo_istituto_adatto = "";
-        $pt_primo_istituto_adatto = "";
-        $secondo_istituto_adatto = "";
-        $pt_secondo_istituto_adatto = "";
-        $terzo_istituto_adatto = "";
-        $pt_terzo_istituto_adatto = "";
-        
-        $i = 0;
-        foreach ($punteggiIstituti as $key => $value) 
-        {
-            if($i == 0)
-            {
-                $primo_istituto_adatto = $key;
-                $pt_primo_istituto_adatto = $value;
-            }
-            else if($i == 1)
-            {
-                $secondo_istituto_adatto = $key;
-                $pt_secondo_istituto_adatto = $value;
-            }
-            else if($i == 2)
-            {
-                $terzo_istituto_adatto = $key;
-                $pt_terzo_istituto_adatto = $value;
-            }
-            else
-            {
-                break;
-            }
-            $i++;
-        }
-        
-        $conn->close();
+        $primo_istituto_adatto = $_GET["primo_istituto_adatto"];
+        $pt_primo_istituto_adatto = $_GET["pt_primo_istituto_adatto"];
+        $secondo_istituto_adatto = $_GET["secondo_istituto_adatto"];
+        $pt_secondo_istituto_adatto = $_GET["pt_secondo_istituto_adatto"];
+        $terzo_istituto_adatto = $_GET["terzo_istituto_adatto"];
+        $pt_terzo_istituto_adatto = $_GET["pt_terzo_istituto_adatto"];
     ?>
 
     <section>
