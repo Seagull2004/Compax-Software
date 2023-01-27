@@ -1,5 +1,5 @@
 <?php
-    include_once ("../../php/config.php");
+    include_once ("../../php/generalConfig.php");
     
     $sqlScuoleRisultati = "SELECT DISTINCT primo_istituto_adatto FROM risultati_medie";
 

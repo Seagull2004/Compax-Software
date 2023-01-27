@@ -1,5 +1,5 @@
 <?php
-    include_once ("../../php/config.php");
+    include_once ("../../php/generalConfig.php");
     
     $sqlRisultati = "SELECT id_risultato_medie, primo_istituto_adatto FROM risultati_medie";
 

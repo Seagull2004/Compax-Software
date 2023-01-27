@@ -49,7 +49,7 @@ function loginAdmin($conn, $adminUsername, $adminPwd){
         session_start();
         $_SESSION["admin"] = $adminUsernameExists["id"];
         $_SESSION["nomeAdmin"] = $adminUsernameExists["username"];
-        header("Location: ../../index/indexTemp.php");
+        header("Location: ../../index/indexDashboard.php");
         exit();
     }
     else{
