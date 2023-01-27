@@ -11,10 +11,10 @@
 <body>
     <?php
         $nome = $_GET["nome"];
-        $regione = $_GET["regioni"];
-        $provincia = $_GET["provincie"];
-        $comune = $_GET["comuni"];
-        $id_scuola = $_GET["scuole"];
+        $regione = $_GET["regione"];
+        $provincia = $_GET["provincia"];
+        $comune = $_GET["comune"];
+        $id_scuola = $_GET["scuola"];
         $primo_istituto_adatto = $_GET["primo_istituto_adatto"];
         $pt_primo_istituto_adatto = $_GET["pt_primo_istituto_adatto"];
         $secondo_istituto_adatto = $_GET["secondo_istituto_adatto"];
