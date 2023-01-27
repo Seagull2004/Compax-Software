@@ -55,6 +55,7 @@ section{
 hr{
     width: 100%;
     border: 2px solid #6DC1FF;
+    margin-top: 20px;
 }
 
 form{
@@ -68,11 +69,13 @@ form{
 input{
     margin-top: 1.5rem;
     padding: 1.5%;
-    width: 30%;
+    width: 50%;
     border-radius: 20px;
     outline: none;
     border: none;
     border-radius: 18px;
+    border: 2px solid #6DC1FF;
+    box-shadow: 11px 14px 22px 3px rgba(0,0,0,0.1);
 }
 
 input:focus{
@@ -83,12 +86,13 @@ input:focus{
 select{
     margin-top: 1.5rem;
     padding: 1.5%;
-    width: 30%;
+    width: 50%;
     border-radius: 20px;
     outline: none;
     border: none;
     border-radius: 18px;
     box-shadow: 11px 14px 22px 3px rgba(0,0,0,0.1);
+    border: 2px solid #6DC1FF;
 }
 
 select:focus{
@@ -120,14 +124,27 @@ select:focus{
     transform: rotate(5deg);
 }
 .header{
-    background-color: rgb(245, 240, 240);
-    border-radius: 10px;
+    /*background-color: rgb(227, 31, 31);
+    border-radius: 5px;
     overflow: Auto;
+    height: 600px;
     background-color: #EEEEEE;
-    height: 450px;
     scrollbar-base-color: #2da8ff;
     scrollbar-arrow-color: #CCCCCC;
-    scrollbar-track-color: #CCCCCC;
+    scrollbar-track-color: #CCCCCC;*/
+    background-color: rgb(245, 240, 240);
+            border-radius: 5px;
+            overflow: Auto;
+            background-color: #EEEEEE;
+            
+            scrollbar-base-color: #2da8ff;
+            scrollbar-arrow-color: #CCCCCC;
+            scrollbar-track-color: #CCCCCC;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding-top: 60px;
+            overflow-x: hidden;
+            
 }
 
 .container {
@@ -207,4 +224,11 @@ select:focus{
     
 }
 
-  
+.content_header{
+            background-color: rgb(245, 240, 240);
+            border-radius: 10px;
+            overflow: Auto;
+            background-color: #EEEEEE;
+            height: 900px;
+            width:900px;
+}

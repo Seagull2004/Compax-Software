@@ -27,7 +27,6 @@
              
             }
         });
-
         const promise2 =  $.ajax({
             url: "../php/queryRisposteMedie.php",
             type: "POST",
@@ -39,11 +38,15 @@
             }
         });
 
-        Promise.all([promise1, promise2]).then(function(response1, response2) 
-        {
-            generaForm()
+        Promise.all([promise1, promise2]).then(function(response1, response2) {
+        generaForm()
         });
+
+       
+
+       
         
+
         function generaForm()
         {
             domande.forEach(function(item, i)
@@ -99,7 +102,6 @@
         .paragrafo{
             display:flex;
             padding-top:20px;
-            
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
             font-size: 1.5rem;
@@ -112,7 +114,7 @@
             display: flex;
             border-radius: 4%;
             text-align: center;
-            border-color: red;
+            
         
         }
 
@@ -151,10 +153,10 @@
         <img src="../img/diploma.png" alt="" class="diploma">
         <img src="../img/mappamondo.png" alt="" class="mappamondo">
 
-        <form class="form" method="POST" action="./inserisci_risultati_medie.php">
+        <form class="form" method="POST" action="risultati_medie.php">
             <div class="header">
             <div>Benvenuto</div>
-                <input type="text" style="border-color: red;" class='risultatiMedie' name="nomeStudente" value="<?php echo $_POST["nomeStudente"]?>" readonly>
+                <input type="text" class='risultatiMedie' name="nomeStudente" value="<?php echo $_POST["nomeStudente"]?>" readonly>
                 <div class="divForm">
                     <p class='paragrafo'>Scuola </p> 
                     <input type="text" class='risultatiMedie'  name="scuole" value="<?php echo $_POST["scuole"]?>" readonly>
