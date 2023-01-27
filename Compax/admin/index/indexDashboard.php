@@ -21,7 +21,8 @@ if(!isset($_SESSION['admin'])){
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <title>Admin</title>
 </head>
 
@@ -262,23 +263,11 @@ if(!isset($_SESSION['admin'])){
       <div class="px-4 md:px-10 mx-auto w-full -m-24">
         <div class="flex flex-wrap">
           <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-            <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-800">
-              <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
-                <div class="flex flex-wrap items-center">
-                  <div class="relative w-full max-w-full flex-grow flex-1">
-                    <h6 class="uppercase text-blueGray-100 mb-1 text-xs font-semibold">
-                      Overview
-                    </h6>
-                    <h2 class="text-white text-xl font-semibold">
-                      Sales value
-                    </h2>
-                  </div>
-                </div>
-              </div>
+            <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-white">
               <div class="p-4 flex-auto">
                 <!-- Chart -->
-                <div class="relative" style="height:350px">
-                  <canvas id="line-chart"></canvas>
+                <div class="relative" style="height:400px">
+                  <div id="line-chart"></div>
                 </div>
               </div>
             </div>
@@ -547,9 +536,13 @@ if(!isset($_SESSION['admin'])){
             </div>
           </div>
         </footer>
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
       </div>
     </div>
   </div>
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" charset="utf-8"></script>
   <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
   <script type="text/javascript">
@@ -598,229 +591,49 @@ if(!isset($_SESSION['admin'])){
     });
 
 
-    function grafico() {
-      /* Add current date to the footer
-      
+    function grafico()
+    {
       var istitutiCount = [];
-
-      for (var i = 0; i < risultati.length; i++) {
-          var istituto = risultati[i];
-          var found = false;
-          for (var j = 0; j < istitutiCount.length; j++) {
-              if (istitutiCount[j].istituto == istituto) {
-                  istitutiCount[j].count++;
-                  found = true;
-                  break;
-              }
-          }
-        if (!found) {
-            istitutiCount.push({istituto: istituto, count: 1});
-        }
-      }
-      console.log(istitutiCount);*/
-
-      var istitutiCount = [];
-
-      for (var i = 0; i < risultati.length; i++) {
+      for (var i = 0; i < risultati.length; i++) 
+      {
         var istituto = risultati[i];
         var found = false;
-        for (var j = 0; j < istitutiCount.length; j++) {
-            if (istitutiCount[j].name == istituto) {
+        for (var j = 0; j < istitutiCount.length; j++) 
+        {
+            if (istitutiCount[j].name == istituto) 
+            {
                 istitutiCount[j].count++;
                 found = true;
                 break;
             }
           }
-      if (!found) {
-        istitutiCount.push({name: istituto, count: 1});
+        if (!found) 
+        {
+          istitutiCount.push({name: istituto, count: 1});
+        }
       }
-    }
-    console.log(istitutiCount);
 
+      var data = [];
+      istitutiCount.forEach(function(item, i)
+      {
+        data.push({label:item.name, y:item.count})
+      });
 
-    var data = [];
-    for (var i = 0; i < scuoleRisultati.length; i++) {
-        var scuola = scuoleRisultati[i];
-        for (var j = 0; j < istitutiCount.length; j++) {
-            if (istitutiCount[j].name == scuola) {
-                data.push({label: scuola, y: istitutiCount[j].count});
-                break;
-            }
-        }
-    }
-    console.log(data);
-
-
-      document.getElementById("javascript-date").innerHTML = new Date().getFullYear();
-      /* Chart initialisations */
-      /* Line Chart */
-      var config = {
-        type: "bar",
-        data: {
-          labels: scuoleRisultati,
-          datasets: data,
+      // adesso che ho i dati a disposizione inserisco li inserisco nel grafico
+      var chart = new CanvasJS.Chart("line-chart", 
+      {
+        title:
+        {
+          text: "Totale esiti post-medie"              
         },
-        options: {
-          maintainAspectRatio: false,
-          responsive: true,
-          title: {
-            display: false,
-            text: "Sales Charts",
-            fontColor: "white"
-          },
-          legend: {
-            labels: {
-              fontColor: "white"
-            },
-            align: "end",
-            position: "bottom"
-          },
-          tooltips: {
-            mode: "index",
-            intersect: false
-          },
-          hover: {
-            mode: "nearest",
-            intersect: true
-          },
-          scales: {
-            xAxes: [
-              {
-                ticks: {
-                  fontColor: "rgba(255,255,255,.7)"
-                },
-                display: true,
-                scaleLabel: {
-                  display: false,
-                  labelString: "Month",
-                  fontColor: "white"
-                },
-                gridLines: {
-                  display: false,
-                  borderDash: [2],
-                  borderDashOffset: [2],
-                  color: "rgba(33, 37, 41, 0.3)",
-                  zeroLineColor: "rgba(0, 0, 0, 0)",
-                  zeroLineBorderDash: [2],
-                  zeroLineBorderDashOffset: [2]
-                }
-              }
-            ],
-            yAxes: [
-              {
-                ticks: {
-                  fontColor: "rgba(255,255,255,.7)"
-                },
-                display: true,
-                scaleLabel: {
-                  display: false,
-                  labelString: "Value",
-                  fontColor: "white"
-                },
-                gridLines: {
-                  borderDash: [3],
-                  borderDashOffset: [3],
-                  drawBorder: false,
-                  color: "rgba(255, 255, 255, 0.15)",
-                  zeroLineColor: "rgba(33, 37, 41, 0)",
-                  zeroLineBorderDash: [2],
-                  zeroLineBorderDashOffset: [2]
-                }
-              }
-            ]
-          }
-        }
-      };
-      var ctx = document.getElementById("line-chart").getContext("2d");
-      window.myLine = new Chart(ctx, config);
-
-      /* Bar Chart*/
-      config = {
-        type: "bar",
-        data: {
-          labels: scuoleRisultati,
-          datasets: [
-            {
-              label: new Date().getFullYear(),
-              backgroundColor: "#ed64a6",
-              borderColor: "#ed64a6",
-              data: istitutiCount,
-              fill: false,
-              barThickness: 8
-            },
-            {
-              label: new Date().getFullYear() - 1,
-              fill: false,
-              backgroundColor: "#4c51bf",
-              borderColor: "#4c51bf",
-              data: istitutiCount,
-              barThickness: 8
-            }
-          ]
-        },
-        options: {
-          maintainAspectRatio: false,
-          responsive: true,
-          title: {
-            display: false,
-            text: "Orders Chart"
-          },
-          tooltips: {
-            mode: "index",
-            intersect: false
-          },
-          hover: {
-            mode: "nearest",
-            intersect: true
-          },
-          legend: {
-            labels: {
-              fontColor: "rgba(0,0,0,.4)"
-            },
-            align: "end",
-            position: "bottom"
-          },
-          scales: {
-            xAxes: [
-              {
-                display: false,
-                scaleLabel: {
-                  display: true,
-                  labelString: "Month"
-                },
-                gridLines: {
-                  borderDash: [2],
-                  borderDashOffset: [2],
-                  color: "rgba(33, 37, 41, 0.3)",
-                  zeroLineColor: "rgba(33, 37, 41, 0.3)",
-                  zeroLineBorderDash: [2],
-                  zeroLineBorderDashOffset: [2]
-                }
-              }
-            ],
-            yAxes: [
-              {
-                display: true,
-                scaleLabel: {
-                  display: false,
-                  labelString: "Value"
-                },
-                gridLines: {
-                  borderDash: [2],
-                  drawBorder: false,
-                  borderDashOffset: [2],
-                  color: "rgba(33, 37, 41, 0.2)",
-                  zeroLineColor: "rgba(33, 37, 41, 0.15)",
-                  zeroLineBorderDash: [2],
-                  zeroLineBorderDashOffset: [2]
-                }
-              }
-            ]
-          }
-        }
-      };
-      ctx = document.getElementById("bar-chart").getContext("2d");
-      window.myBar = new Chart(ctx, config);
+        data: 
+        [{
+          // Change type to "doughnut", "line", "splineArea", etc.
+          type: "column",
+          dataPoints: data
+        }]
+      });
+      chart.render();
     }
   </script>
 </body>
