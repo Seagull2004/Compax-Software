@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+table {
+    border:1px solid #b3adad;
+    border-collapse:collapse;
+    padding:5px;
+}
+table th {
+    border:1px solid #b3adad;
+    padding:5px;
+    background: #f0f0f0;
+    color: #313030;
+}
+table td {
+    border:1px solid #b3adad;
+    text-align:center;
+    padding:5px;
+    background: #ffffff;
+    color: #313030;
+}
+
+
+header{
+    height: 70px;
+    background-color: rgb(60, 148, 255);
+    display: flex;
+    flex-direction: row;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+}
+
+
+h4{
+    color: #f9f9f9;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.opzioni{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.opzioni a{
+    color: #f9f9f9;
+    font-size: 15px;
+    font-weight: 600
+    border-radius: 99px;
+}
