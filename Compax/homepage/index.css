@@ -154,7 +154,7 @@ h4{
 /*---- ANIMAZIONE PANINO BELLA ----*/
 
 .panino:hover span:nth-child(2){
-    transform: translateX(10px);
+    transform: translateX(0px);
 }
 
 .panino.active span:nth-child(1){
@@ -163,7 +163,7 @@ h4{
 
 .panino.active span:nth-child(2){
     opacity: 0;
-    transform: translateX(15px);
+    transform: translateX(10px);
 }
 
 .panino.active span:nth-child(3){
@@ -389,11 +389,11 @@ footer{
 }
 
 .linkutili ul li{
-    margin-top: 10%;
+    margin-top: 12%;
 }
 
 .linkutili2 ul li{
-    margin-top: 10%;
+    margin-top: 12%;
 }
 
 
@@ -805,8 +805,12 @@ input[type=text]:focus{
     }
     
     .copyright p{
-        margin: 1%;
+        margin: 3% auto;
         font-size: 15px;
+    }
+
+    .copyright p:nth-child(2){
+        display: none;
     }
 
 

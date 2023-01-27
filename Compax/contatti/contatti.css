@@ -404,6 +404,10 @@ form p{
 }
 
 
+
+
+
+
 @media (max-width: 768px){
 
     body{
@@ -469,7 +473,6 @@ form p{
     .sezione{
         min-height: 70vh;
     }
-
 
 
 
@@ -580,10 +583,13 @@ form p{
     }
     
     .copyright p{
-        margin: 1%;
+        margin: 3% auto;
         font-size: 15px;
     }
-
+    
+    .copyright p:nth-child(2){
+        display: none;
+    }
 
 
 
@@ -606,35 +612,35 @@ form p{
 
 
 
-.contattaci{
-    background-color: #f7f7f7;
-    width: 90%;
-    border-radius: 15px;
-    box-shadow: 8px 10px 13px -3px rgba(0,0,0,0.1);
-    margin: auto;
-}
+    .contattaci{
+        background-color: #f7f7f7;
+        width: 90%;
+        border-radius: 15px;
+        box-shadow: 8px 10px 13px -3px rgba(0,0,0,0.1);
+        margin: auto;
+    }
 
-.check{
-    margin: 8% 0 0 7%;
-    width: 8%;
-}
+    .check{
+        margin: 8% 0 0 7%;
+        width: 8%;
+    }
 
-.but-contatti{
-    border: none;
-    padding: 1.5%; 
-    border-radius: 10px;
-    width: 25%;
-    margin-left: 13%;
-    margin-top: 5%;
-    color: #f9f9f9;
-    background-color: #5991FF;
-    background: rgb(25,150,255);
-    background: -moz-linear-gradient(45deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%);
-    background: -webkit-linear-gradient(45deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%);
-    background: linear-gradient(45deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%);
-    cursor: pointer;
-    font-size: 15px;
-}
+    .but-contatti{
+        border: none;
+        padding: 1.5%; 
+        border-radius: 10px;
+        width: 25%;
+        margin-left: 13%;
+        margin-top: 5%;
+        color: #f9f9f9;
+        background-color: #5991FF;
+        background: rgb(25,150,255);
+        background: -moz-linear-gradient(45deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%);
+        background: -webkit-linear-gradient(45deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%);
+        background: linear-gradient(45deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%);
+        cursor: pointer;
+        font-size: 15px;
+    }
 }
 
 

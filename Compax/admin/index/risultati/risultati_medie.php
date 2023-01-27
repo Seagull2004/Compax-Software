@@ -11,7 +11,7 @@ if(!isset($_SESSION['admin'])){
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="shortcut icon" href="../../../img/logo.png" />
+    <link rel="shortcut icon" href="../../../img/logo.png"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="apple-touch-icon"
@@ -120,7 +120,7 @@ if(!isset($_SESSION['admin'])){
               <li class="items-center">
                 <a
                   class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  href="../risultati/risultati_medie.php"
+                  href="#/profile"
                   ><i class="fas fa-user-circle text-blueGray-300 mr-2 text-sm"></i>
                   Risultati</a
                 >
@@ -128,7 +128,7 @@ if(!isset($_SESSION['admin'])){
               <li class="items-center">
                 <a
                   class="text-blueGray-300 text-xs uppercase py-3 font-bold block"
-                  href="#/login"
+                  href="../adminLogin/login-out/logout.php"
                   ><i class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"></i>
                   Email (soon)</a
                 >
@@ -136,7 +136,7 @@ if(!isset($_SESSION['admin'])){
               <li class="items-center">
                 <a
                   class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  href="messaggi.php"
+                  href="../messaggi/messaggi.php"
                   ><i
                     class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
                   ></i>
@@ -201,10 +201,10 @@ if(!isset($_SESSION['admin'])){
           <?php
             include_once '../../../php/config.php';
 
-            $sql = "SELECT nome, cognome, email, testo FROM messaggi";
+            $sql = "SELECT * FROM risultati_medie";
             $result = $conn->query($sql);
 
-            echo "<div class='w-full xl:w-8/12 mb-12 xl:mb-0 px-0 mx-auto mt-6'>
+            echo "<div class='w-full mb-12 xl:mb-0 px-0 mx-auto mt-6'>
             <div class='relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded'>
             <div class='rounded-t mb-0 px-0 py-6 border-0'>
             <div class='flex flex-wrap items-center'>
@@ -213,20 +213,24 @@ if(!isset($_SESSION['admin'])){
             if ($result->num_rows > 0) {
                 echo "<table class='items-center w-full bg-transparent border-collapse'>
                 <tr>
-                <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>nome</th>
-                <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>cognome</th>
-                <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>email</th>
-                <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>testo</th>
+                <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>Nome</th>
+                <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>Regione</th>
+                <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>Provincia</th>
+                <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>Primo istiuto adatto</th>
+                <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>Secondo istiuto adatto</th>
+                <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>Terzo istiuto adatto</th>
                 </tr>";
 
             
                 while($row = $result->fetch_assoc()) {
                     echo "
                     <tr>
-                    <td class='border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4'>" . $row["nome"]. "</td>
-                    <td class='border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4'>" . $row["cognome"]. "</td>
-                    <td class='border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4'>" . $row["email"]. "</td>
-                    <td class='border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4'>" . $row["testo"]. "</td>
+                    <td class='border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4'>" . $row["Nome"]. "</td>
+                    <td class='border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4'>" . $row["Regione"]. "</td>
+                    <td class='border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4'>" . $row["Provincia"]. "</td>
+                    <td class='border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4'>" . $row["primo_istituto_adatto"]. "</td>
+                    <td class='border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4'>" . $row["secondo_istituto_adatto"]. "</td>
+                    <td class='border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4'>" . $row["terzo_istituto_adatto"]. "</td>
                     </tr>";
                 }
                 echo "</table></div></div></div></div></div>";

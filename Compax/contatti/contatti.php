@@ -74,15 +74,15 @@
             <input type="email" placeholder="Email" class="emailForm" name="email"><br>
             <textarea placeholder="Testo" name="testo" cols="30" rows="10"
                 style="width: 87%; height: 40%; resize: none;"></textarea><br>
-            <input type="checkbox" name="policy" class="check" value="checked"><label>Accetto le condizioni sulle policy</label>
+            <input type="checkbox" name="policy" class="check" value="checked"><label>Accetto le condizioni sulle
+                policy</label>
             <button type="submit" class="but-contatti" name="invia">Invia</button>
         </form>
 
         <div class="mappa">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2774.7603247326692!2d13.618606!3d45.9360899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477b00cde4ea5a09%3A0x80a7a10b1769e3e7!2sISIS%20Galileo%20Galilei%20-%20Enrico%20Fermi%20-%20Nicol%C3%B2%20Pacassi!5e0!3m2!1sit!2sit!4v1667058159521!5m2!1sit!2sit"
-                allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 

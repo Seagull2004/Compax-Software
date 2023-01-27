@@ -322,7 +322,7 @@ margin-bottom: 0;
 /*---- ANIMAZIONE PANINO BELLA ----*/
 
 .panino:hover span:nth-child(2){
-    transform: translateX(10px);
+    transform: translateX(0px);
 }
 
 .panino.active span:nth-child(1){
@@ -759,10 +759,13 @@ input[type=text]:focus{
     .form p{
         font-size: 15px;
         text-align: justify;
+        margin-bottom: 5%;
     }
 
     .form h1{
         font-size: 30px;
+        text-align: left;
+        margin-bottom: 3%;
     }
     
 
@@ -1023,8 +1026,12 @@ input[type=text]:focus{
 }
 
 .copyright p{
-    margin: 1%;
+    margin: 3% auto;
     font-size: 15px;
+}
+
+.copyright p:nth-child(2){
+    display: none;
 }
 
 

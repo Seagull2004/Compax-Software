@@ -9,7 +9,6 @@
 
 
     <link rel="icon" href="../img/logo.png">
-    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -43,6 +42,23 @@
         }
     </script>
 
+    <script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"floatingPreferencesButtonDisplay":"anchored-top-left","inlineDelay":1000,"invalidateConsentWithoutLog":true,"perPurposeConsent":true,"siteId":2957540,"whitelabel":false,"cookiePolicyId":89185341,"lang":"it", "banner":{ "acceptButtonColor":"#0073CE","acceptButtonDisplay":true,"backgroundColor":"#FFFFFF","closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"linksColor":"#0073CE","position":"float-bottom-right","rejectButtonDisplay":true,"textColor":"#000000" }};
+    </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XKFT4TNP60"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XKFT4TNP60');
+        </script>
+
+    <link rel="stylesheet" href="index.css">
     <title>Home</title>
 </head>
 
@@ -56,7 +72,7 @@
 
                 <div class="opzioni">
                     <a class="aNav" href="#home">Home</a>
-                    <a class="aNav" href="#diploma">Disploma</a>
+                    <a class="aNav" href="#diploma">Diploma</a>
                     <a class="aNav" href="#percorsi">Medie</a>
                     <a class="aNav" href="#">Statistiche</a>
                     <a class="aNav" href="../chi siamo/chiSiamo.php">Chi siamo</a>
@@ -264,6 +280,7 @@
                     <li><a href="#">Italia</a></li>
                     <li><a href="#">Email: compaxsoftware@gmail.com</a></li>
                     <li><a href="#">PEC: compaxsoftware@pec.it</a></li>
+                    <li><a href="#">FAX: 1234567890</a></li>
                 </ul>
             </div>
 
@@ -317,8 +334,8 @@
 
 
         <div class="copyright">
-            <p>© 2023 Compax Software - All rights reserved</p>
-            <p>Compax Software - P.IVA 01234567890 - Cap. Soc. 50.000,00 € </p>
+            <p>© 2023 Compax Software - All rigths reserved</p>
+            <p>Cap. Soc. 50.000,00 € - <a href="https://www.iubenda.com/privacy-policy/89185341" class="iubenda-nostyle no-brand iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy " style="color: black;">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></p>
         </div>
 
     </footer>
@@ -327,7 +344,7 @@
 
 
 
-    <script src="panino.js"></script>
+    <script src="panino.js"></>
 </body>
 
 </html>
