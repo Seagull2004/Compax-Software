@@ -199,7 +199,7 @@ if(!isset($_SESSION['admin'])){
 
 
           <?php
-            include_once '../../../php/config.php';
+            include_once('../../../php/generalConfig.php');
 
             $sql = "SELECT * FROM risultati_medie";
             $result = $conn->query($sql);
@@ -327,5 +327,6 @@ if(!isset($_SESSION['admin'])){
         document.getElementById(dropdownID).classList.toggle("hidden");
         document.getElementById(dropdownID).classList.toggle("block");
       }
+    </script>
   </body>
 </html>

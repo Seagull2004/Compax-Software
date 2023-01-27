@@ -199,7 +199,7 @@ if(!isset($_SESSION['admin'])){
 
 
           <?php
-            include_once '../../../php/config.php';
+            include_once('../../../php/generalConfig.php');
 
             $sql = "SELECT nome, cognome, email, testo FROM messaggi";
             $result = $conn->query($sql);
@@ -240,9 +240,9 @@ if(!isset($_SESSION['admin'])){
     
           </div>
           
-          <footer class="block py-6">
-            <div class="container mx-auto px-6">
-              <hr class="mb-4 border-b-1 border-blueGray-200" />
+          <footer class="block h-screen relative">
+            <div class="container px-6 absolute bottom-10">
+              <hr class="mb-4 border-b-1 border-blueGray-200"/>
               <div class="flex flex-wrap items-center md:justify-between justify-center">
                 <div class="w-full md:w-4/12 px-4">
                   <div class="text-sm text-blueGray-500 font-semibold py-1">
@@ -298,9 +298,6 @@ if(!isset($_SESSION['admin'])){
       </div>
     </div>
 
-
-
-
     <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
     <script type="text/javascript">
       /* Sidebar - Side navigation menu on mobile/responsive mode */
@@ -323,5 +320,6 @@ if(!isset($_SESSION['admin'])){
         document.getElementById(dropdownID).classList.toggle("hidden");
         document.getElementById(dropdownID).classList.toggle("block");
       }
+    </script>
   </body>
 </html>

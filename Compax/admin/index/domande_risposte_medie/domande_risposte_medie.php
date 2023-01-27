@@ -199,7 +199,7 @@ if(!isset($_SESSION['admin'])){
 
 
           <?php
-            include_once '../../../php/config.php';
+            include_once('../../../php/generalConfig.php');
 
             $sql1 = "SELECT id_domanda, domanda FROM domande_medie";
             $result1 = $conn->query($sql1);
@@ -266,59 +266,63 @@ if(!isset($_SESSION['admin'])){
 
 
                 
-        <form action="insert.php" method="post" class="mx-auto mt-12">
-        <div class="mb-4 text-center">
-                <label for="domanda" class="text-xl font-medium">Inserisci una nuova domanda:</label>
-                <input type="text" id="domanda" name="domanda" class="ml-5 border border-gray-400 rounded-md p-1 w-full mt-4">
-            </div>
-            <div class="mb-4 text-center">
-                <label for="num_risposte" class="text-lg font-medium">Numero di risposte:</label>
-                <select id="num_risposte" name="num_risposte" onchange="createInputFields()" class="ml-5 mb-6 border border-gray-400 rounded-md p-1 w-1/6">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <div id="input_fields"></div>
-            <div class="text-center">
-                <input type="submit" value="Invia" class="cursor-pointer bg-blue-500 text-white px-4 py-2 w-1/3 rounded-md hover:bg-blue-600">
-            </div>
-        </form>
+          <form action="insert.php" method="post" class="mx-auto mt-12">
+          <div class="mb-4 text-center">
+                  <label for="domanda" class="text-xl font-medium">Inserisci una nuova domanda:</label>
+                  <input type="text" id="domanda" name="domanda" class="ml-5 border border-gray-400 rounded-md p-1 w-full mt-4">
+              </div>
+              <div class="mb-4 text-center">
+                  <label for="num_risposte" class="text-lg font-medium">Numero di risposte:</label>
+                  <select id="num_risposte" name="num_risposte" onchange="createInputFields()" class="ml-5 mb-6 border border-gray-400 rounded-md p-1 w-1/6">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                  </select>
+              </div>
+              <div id="input_fields"></div>
+              <div class="text-center">
+                  <input type="submit" value="Invia" class="cursor-pointer bg-blue-500 text-white px-4 py-2 w-1/3 rounded-md hover:bg-blue-600">
+              </div>
+          </form>
 
-        <script>
-            function createInputFields() {
-            var numRisposte = document.getElementById("num_risposte").value;
-            var inputFields = document.getElementById("input_fields");
-            inputFields.innerHTML = "";
-            for (var i = 1; i <= numRisposte; i++) {
-            inputFields.innerHTML += '<div class="mb-4 text-center"><label for="risposta' + i + '">Risposta ' + i + ':</label><input class="ml-5 border border-gray-400 rounded-md p-1 w-1/2" type="text" id="risposta' + i + '" name="risposta' + i + '"></div><br>';
-            }
-        }
-        </script>
+          <script>
+              function createInputFields() {
+              var numRisposte = document.getElementById("num_risposte").value;
+              var inputFields = document.getElementById("input_fields");
+              inputFields.innerHTML = "";
+              for (var i = 1; i <= numRisposte; i++) {
+              inputFields.innerHTML += '<div class="mb-4 text-center"><label for="risposta' + i + '">Risposta ' + i + ':</label><input class="ml-5 border border-gray-400 rounded-md p-1 w-1/2" type="text" id="risposta' + i + '" name="risposta' + i + '"></div><br>';
+              }
+          }
+          </script>
 
-        <form action="delete.php" method="post" class="mx-auto">
-            <div class="mt-20 mb-4 text-center">
-            <label for="domande" class="text-lg font-medium">Seleziona la domanda da eliminare:</label>
-            <select id="domande" name="id_domanda"class="ml-5 border border-gray-400 rounded-md p-2 w-1/2">
-                <?php
-                $sql = "SELECT id_domanda, domanda FROM domande_medie";
-                $result = $conn->query($sql);
-                while ($row = $result->fetch_assoc()) {
-                    echo '<option value="' . $row['id_domanda'] . '">' . $row['domanda'] . '</option>';
-                }
-                ?>
-            </select>
-            </div>
-            <div class="text-center mb-10 mt-8">
-            <input type="submit" value="Elimina" class="cursor-pointer bg-red-500 text-white px-4 py-2 w-1/6 rounded-md hover:bg-red-600">
-            </div>
-        </form>
+          <form action="delete.php" method="post" class="mx-auto">
+              <div class="mt-20 mb-4 text-center">
+              <label for="domande" class="text-lg font-medium">Seleziona la domanda da eliminare:</label>
+              <select id="domande" name="id_domanda"class="ml-5 border border-gray-400 rounded-md p-2 w-1/2">
+                  <?php
+                  $sql = "SELECT id_domanda, domanda FROM domande_medie";
+                  $result = $conn->query($sql);
+                  while ($row = $result->fetch_assoc()) {
+                      echo '<option value="' . $row['id_domanda'] . '">' . $row['domanda'] . '</option>';
+                  }
+                  ?>
+              </select>
+              </div>
+              <div class="text-center mb-10 mt-8">
+              <input type="submit" value="Elimina" class="cursor-pointer bg-red-500 text-white px-4 py-2 w-1/6 rounded-md hover:bg-red-600">
+              </div>
+          </form>
 
 
 
-          <footer class="block py-6">
+          
+        </div>
+      </div>
+
+      <footer class="block py-6 mt-16">
             <div class="container mx-auto px-6">
               <hr class="mb-4 border-b-1 border-blueGray-200" />
               <div class="flex flex-wrap items-center md:justify-between justify-center">
@@ -372,10 +376,9 @@ if(!isset($_SESSION['admin'])){
               </div>
             </div>
           </footer>
-        </div>
-      </div>
     </div>
 
+    
 
     <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
     <script type="text/javascript">
@@ -399,5 +402,6 @@ if(!isset($_SESSION['admin'])){
         document.getElementById(dropdownID).classList.toggle("hidden");
         document.getElementById(dropdownID).classList.toggle("block");
       }
+    </script>
   </body>
 </html>

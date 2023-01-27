@@ -1,5 +1,6 @@
 <?php
-include_once '../../../php/config.php';
+include_once('../../../php/generalConfig.php');
+include_once('../../../php/config.php');
 // Check if the form has been submitted
 if (isset($_POST['id_domanda'])) {
     $id_domanda = $_POST['id_domanda'];

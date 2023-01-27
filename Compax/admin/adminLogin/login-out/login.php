@@ -2,6 +2,7 @@
 
 if(isset($_POST['accedi'])){
     
+    include_once("../../../php/generalConfig.php");
     require_once '../../../php/config.php';
     require_once './funzioni.php';
 

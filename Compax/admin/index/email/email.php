@@ -23,7 +23,7 @@
 </header>
 
 <?php
-        include '../../../php/config.php';
+        include_once('../../../php/generalConfig.php');
         $query = "SELECT * FROM email";
         $result = mysqli_query($conn, $query);
         $check = mysqli_num_rows($result);

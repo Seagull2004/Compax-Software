@@ -25,8 +25,7 @@
 
 
     <?php
-
-    include_once '../../../php/config.php';
+    include_once('../../../php/generalConfig.php');
 
     $sql = "SELECT id_risultato_medie, nome, regione, primo_istituto_adatto, secondo_istituto_adatto, terzo_istituto_adatto FROM risultati_medie";
     $result = $conn->query($sql);
