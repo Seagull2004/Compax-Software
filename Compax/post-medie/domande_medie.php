@@ -42,11 +42,6 @@
         generaForm()
         });
 
-       
-
-       
-        
-
         function generaForm()
         {
             domande.forEach(function(item, i)
@@ -153,7 +148,7 @@
         <img src="../img/diploma.png" alt="" class="diploma">
         <img src="../img/mappamondo.png" alt="" class="mappamondo">
 
-        <form class="form" method="POST" action="risultati_medie.php">
+        <form class="form" method="POST" action="./inserisci_risultati_medie.php">
             <div class="header">
             <div>Benvenuto</div>
                 <input type="text" class='risultatiMedie' name="nomeStudente" value="<?php echo $_POST["nomeStudente"]?>" readonly>
