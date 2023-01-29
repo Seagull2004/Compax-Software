@@ -59,6 +59,7 @@
                     <a class="aNav" href="#">Statistiche</a>
                     <a class="aNav" href="chiSiamo.html">Chi siamo</a>
                     <a class="aNav" href="../contatti/contatti.php">Contatti</a>
+                    <a class="aNav" href="../admin/adminLogin/adminLogin.php">Area riservata</a>
                 </div>
 
                 <button class="panino">
