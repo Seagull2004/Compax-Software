@@ -77,6 +77,7 @@
                     <a class="aNav" href="#">Statistiche</a>
                     <a class="aNav" href="../chi siamo/chiSiamo.php">Chi siamo</a>
                     <a class="aNav" href="../contatti/contatti.php">Contatti</a>
+                    <a class="aNav" href="../admin/adminLogin/adminLogin.php">Area riservata</a>
                 </div>
 
                 <button class="panino">
@@ -340,11 +341,7 @@
 
     </footer>
 
-
-
-
-
-    <script src="panino.js"></>
+    <script src="panino.js"></script>
 </body>
 
 </html>
