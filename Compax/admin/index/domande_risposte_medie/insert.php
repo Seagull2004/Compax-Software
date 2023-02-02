@@ -22,9 +22,9 @@ if (isset($_POST['domanda']) && isset($_POST['num_risposte'])) {
         $punti_professionale_sociale = $_POST['punti_professionale_sociale' .$i];
         $punti_liceo_linguistico = $_POST['punti_liceo_linguistico' .$i];
 
-        $sql = "INSERT INTO risposte_medie (id_domanda, risposta, punti_liceo_sportivo, punti_conservatorio, punti_istituto_professionale, punti_istituto_tecnico, punti_liceo_scientifico, punti_liceo_classico, punti_scienze_umane, punti_istituto_tecnico_turistico, punti_professionale_sociale, punti_liceo_linguistico) VALUES ('$id_domanda', '$risposta', '$punti_liceo_sportivo', '$punti_conservatorio', '$punti_istituto_professionale', '$punti_istituto_tecnico', '$puntu_liceo_scientifico', '$punti_liceo_classico', '$punti_scienze_umane', '$punti_istituto_tecnico_turistico', '$punti_professionale_sociale', '$punti_liceo_linguistico',)";
+        $sql = "INSERT INTO risposte_medie (id_domanda, risposta, punti_liceo_sportivo, punti_conservatorio, punti_istituto_professionale, punti_istituto_tecnico, punti_liceo_scientifico, punti_liceo_classico, punti_scienze_umane, punti_istituto_tecnico_turistico, punti_professionale_sociale, punti_liceo_linguistico) VALUES ('$id_domanda', '$risposta', '$punti_liceo_sportivo', '$punti_conservatorio', '$punti_istituto_professionale', '$punti_istituto_tecnico', '$punti_liceo_scientifico', '$punti_liceo_classico', '$punti_scienze_umane', '$punti_istituto_tecnico_turistico', '$punti_professionale_sociale', '$punti_liceo_linguistico')";
         $conn->query($sql);
     }
-    echo "La domanda e le risposte sono state inserite con successo.";
+    header("Location: domande_risposte_medie.php");
 }
 ?>

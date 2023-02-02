@@ -12,6 +12,6 @@ if (isset($_POST['id_domanda'])) {
     $sql = "DELETE FROM risposte_medie WHERE id_domanda = '$id_domanda'";
     $conn->query($sql);
 
-    echo "La domanda e le relative risposte sono state eliminate con successo.";
+    header("Location: domande_risposte_medie.php");
 }
 ?>

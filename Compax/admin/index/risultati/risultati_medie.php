@@ -145,9 +145,9 @@ if(!isset($_SESSION['admin'])){
               </li>
               <li class="items-center">
                 <a
-                  class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  class="text-blueGray-700 hover:text-red-500 text-xs uppercase py-3 font-bold block"
                   href="../../adminLogin/login-out/logout.php"
-                  ><i class="fas fa-tools text-blueGray-400 mr-2 text-sm"></i>
+                  ><i class="fas fa-power-off text-blueGray-400 mr-2 text-sm"></i>
                   Esci</a
                 >
               </li>
