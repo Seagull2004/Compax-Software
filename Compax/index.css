@@ -371,6 +371,12 @@ article{
     text-align: center;
 }
 
+.grafico h2{
+    font-size: 50px;
+    color: #393939;
+    margin:10% 0 5% 0;
+}
+
 
 
 
@@ -380,6 +386,7 @@ article{
 footer{
     display: flex;
     flex-direction: column;
+    margin-top: 45%;
 }
 
 .link{
@@ -519,20 +526,23 @@ input[type=text]:focus{
 
 @media (max-width: 768px){
 
-    .footerIndex{
-        margin-top: 5vh;
+    #preloader {
+        background-size: 50%;
     }
 
     #pie-chart{
+        /*
         height: 500px;
         padding-top: 20%;
         padding-bottom: 20%;
         padding-left: 5%;
-        padding-right: 5%;
+        padding-right: 5%;*/
+        display: none;
     }
 
     #statistiche{
-        margin-top: 10vh;
+        /*margin-top: 10vh;*/
+        display: none;
     }
 
 

@@ -261,8 +261,8 @@
     </section>
 
 
-    <section class="grafico mostra" id="statistiche">
-        <h2>Grafici e statistiche</h2>
+    <section class="grafico mostra">
+        <h2 id="statistiche">Grafici e statistiche</h2>
         <div id="pie-chart" class="mostra"></div>
     </section>
 
@@ -284,7 +284,7 @@
                 </ul>
             </div>
 
-            <div class="linkutili">
+            <div class="linkutili" style="text-align: center; margin-left: -10%;">
                 <h3>Link utili</h3>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -296,14 +296,14 @@
                 </ul>
             </div>
 
-            <div class="linkutili2">
-                <h3>Link utili</h3>
+            <div class="linkutili2" style="text-align: right;">
+                <h3>Info</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#diploma">Post-diploma</a></li>
-                    <li><a href="#percorsi">Post-medie</a></li>
-                    <li><a href="#">Statistiche</a></li>
-                    <li><a href="#">Chi siamo</a></li>
+                    <li><a href="#">Promozioni</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Lavora con noi</a></li>
                     <li><a href="./admin/adminLogin/adminLogin.php">Area riservata</a></li>
                 </ul>
             </div>
