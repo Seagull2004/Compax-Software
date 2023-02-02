@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/logo.png">
+    <link rel="icon" href="../img/logo.png">
     <link rel="stylesheet" href="./chiSiamo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +44,16 @@
         });
     </script>
 
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XKFT4TNP60"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XKFT4TNP60');
+        </script>
 </head>
 
 <body>
@@ -53,13 +63,12 @@
                 <h4>Compax Software</h4>
 
                 <div class="opzioni">
-                    <a class="aNav" href="../homepage/index.php">Home</a>
-                    <a class="aNav" href="../homepage/index.php#diploma">Disploma</a>
-                    <a class="aNav" href="../homepage/index.php#percorsi">Medie</a>
+                    <a class="aNav" href="../index.php">Home</a>
+                    <a class="aNav" href="../index.php#diploma">Disploma</a>
+                    <a class="aNav" href="../index.php#percorsi">Medie</a>
                     <a class="aNav" href="#">Statistiche</a>
                     <a class="aNav" href="chiSiamo.html">Chi siamo</a>
                     <a class="aNav" href="../contatti/contatti.php">Contatti</a>
-                    <a class="aNav" href="../admin/adminLogin/adminLogin.php">Area riservata</a>
                 </div>
 
                 <button class="panino">
@@ -108,7 +117,7 @@
                 <div class="column">
                     <div class="team">
                         <div class="team-img">
-                            <img src="../img/mattia.jpeg" alt="Team Image">
+                            <img src="../img/michele.png" alt="Team Image">
                         </div>
                         <div class="team-content">
                             <h2>Michele Ongaro</h2>
@@ -117,11 +126,11 @@
                                 Aliquam posuere varius est, eu fermentum lacus fringilla quis.Vivamus rutrum, enim at
                                 congue tempor, neque turpis aliquam lacus, sed consectetur diam diam quis mauris.</p>
                             <div class="team-social">
-                                <a href="#" class="social-tw"> <i class="fab fa-twitter"></i></a>
-                                <a href="#" class="social-fb"> <i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="social-li"> <i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="social-in"> <i class="fab fa-instagram"></i></a>
-                                <a href="#" class="social-yt"> <i class="fab fa-youtube"></i></a>
+                                <a href="#" class="social-tw"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-fb"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-li"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-in"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-yt"><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
@@ -130,11 +139,11 @@
                 <div class="column">
                     <div class="team">
                         <div class="team-img">
-                            <img src="../img/mattia.jpeg" alt="Team Image">
+                            <img src="../img/melissa.png" alt="Team Image">
                         </div>
                         <div class="team-content">
                             <h2>Melissa Olmi</h2>
-                            <h3>Developer and Graphic Desing</h3>
+                            <h3>Developer and UI/UX Designer</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet facilisis neque.
                                 Aliquam posuere varius est, eu fermentum lacus fringilla quis.Vivamus rutrum, enim at
                                 congue tempor, neque turpis aliquam lacus, sed consectetur diam diam quis mauris.</p>
@@ -152,7 +161,7 @@
                 <div class="column">
                     <div class="team">
                         <div class="team-img">
-                            <img src="../img/mattia.jpeg" alt="Team Image">
+                            <img src="../img/mattia.png" alt="Team Image">
                         </div>
                         <div class="team-content">
                             <h2>Mattia Groppo</h2>
@@ -257,9 +266,9 @@
         <div class="emailInput">
             <hr>
             <form action="#">
-                <input class="email" type="text" name="email" placeholder="Email" />
+                <input class="email" type="text" name="email" placeholder="Email" disabled/>
 
-                <input type="submit" class="but-email" value="Invia" name="inviaEmail">
+                <input type="submit" class="but-email" value="Invia" name="inviaEmail" disabled>
                 <p>Iscriviti e rimani sempre aggiornato</p>
 
                 <div class="social">
@@ -278,7 +287,7 @@
 
         <div class="copyright">
             <p>© 2023 Compax Software - All rights reserved</p>
-            <p>Compax Software - P.IVA 01234567890 - Cap. Soc. 50.000,00 €</p>
+            <p>Cap. Soc. 50.000,00 € - <a href="https://www.iubenda.com/privacy-policy/89185341" class="iubenda-nostyle no-brand iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy " style="color: black;">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></p>
         </div>
 
     </footer>

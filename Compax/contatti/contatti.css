@@ -140,10 +140,12 @@ h4{
 
 
 
+
+
 /*---- ANIMAZIONE PANINO BELLA ----*/
 
 .panino:hover span:nth-child(2){
-    transform: translateX(10px);
+    transform: translateX(0px);
 }
 
 .panino.active span:nth-child(1){
@@ -152,13 +154,16 @@ h4{
 
 .panino.active span:nth-child(2){
     opacity: 0;
-    transform: translateX(15px);
+    transform: translateX(10px);
 }
 
 .panino.active span:nth-child(3){
     transform: translate(-3px, 3px) rotate(-45deg);
 }
 
+
+
+/*------------------------------------*/
 
 
 
@@ -223,6 +228,20 @@ section{
     box-shadow: 8px 10px 13px -3px rgba(0,0,0,0.1);
 }
 
+.contattaci h1{
+    margin: 3%;
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(26, 26, 26);
+}
+
+.contattaci div{
+    display: inline-flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 5% 0 0 12%;
+}
+
 input[type=text]:focus{
     outline: 2px solid #5991FF;
 }
@@ -236,17 +255,20 @@ section form input{
    padding: 2%; 
    border-radius: 10px;
    width: 40%;
-   margin-left: 6.5%;
-   margin-top: 5%;
    background-color: #fbfbfb;
    box-shadow: 8px 10px 13px -3px rgba(0,0,0,0.1);
 }
+
+.contattaci xinput[type=text]{
+    margin-left: 6.5%;
+}
+
 
 input[type=email]{
     border: none;
     padding: 2%; 
     border-radius: 10px;
-    width: 60%;
+    width: 87%;
     margin-left: 6.5%;
     margin-top: 5%;
     background-color: #fbfbfb;
@@ -269,8 +291,7 @@ textarea:focus{
 }
 
 .check{
-    margin: 8% 0 0 7%;
-    width: 8%;
+    width: 5%;
 }
 
 .but-contatti{
@@ -278,8 +299,6 @@ textarea:focus{
     padding: 1.5%; 
     border-radius: 10px;
     width: 25%;
-    margin-left: 13%;
-    margin-top: 5%;
     color: #f9f9f9;
     background-color: #5991FF;
     background: rgb(25,150,255);
@@ -376,13 +395,16 @@ form p{
 
 .fa-brands{
     font-size: 25px;
-    margin-left: 15%;
     color: #393939;
 }
 
 .fa-brands:hover{
     color:#5991FF;
     cursor: pointer;
+}
+
+.social a{
+    margin-left: 15%;
 }
 
 .social{
@@ -472,6 +494,10 @@ form p{
 
     .sezione{
         min-height: 70vh;
+    }
+
+    .navActive{
+        left: 0;
     }
 
 
@@ -592,6 +618,9 @@ form p{
     }
 
 
+    br{
+        display: none;
+    }
 
 
     section{
@@ -599,20 +628,10 @@ form p{
         flex-direction: column;
     }
 
-    iframe{
-        margin: 20% 0 0 8%;
-        width: 350px;
-        height: 450px; 
-        border:0;
-    }
-
-    .social{
-        display: none;
-    }
-
-
-
     .contattaci{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: #f7f7f7;
         width: 90%;
         border-radius: 15px;
@@ -620,18 +639,40 @@ form p{
         margin: auto;
     }
 
-    .check{
-        margin: 8% 0 0 7%;
-        width: 8%;
+    .contattaci input[type=text], .contattaci input[type=email]{
+        width: 90%;
+        margin: 3% auto;
+        padding: 3%;
+    }
+
+    textarea{
+        margin: 4% auto;
+        width: 90%;
+    }
+
+    form h1{
+        display: block;
+        margin: 6% 0 3% 0;
+        color: rgb(26, 26, 26);
+    }
+
+
+    form div{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: baseline;
+        justify-items: center;
+        margin: auto;
     }
 
     .but-contatti{
         border: none;
-        padding: 1.5%; 
+        padding: 3%; 
         border-radius: 10px;
-        width: 25%;
-        margin-left: 13%;
-        margin-top: 5%;
+        width: 40%;
+        margin: 7% auto;
         color: #f9f9f9;
         background-color: #5991FF;
         background: rgb(25,150,255);
@@ -641,6 +682,21 @@ form p{
         cursor: pointer;
         font-size: 15px;
     }
+
+
+
+
+    .social{
+        display: none;
+    }
+
+    iframe{
+        margin: 20% 0 0 8%;
+        width: 350px;
+        height: 450px; 
+        border:0;
+    }
+
 }
 
 

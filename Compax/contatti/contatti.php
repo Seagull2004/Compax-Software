@@ -19,6 +19,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Contatti</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XKFT4TNP60"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XKFT4TNP60');
+        </script>
 </head>
 
 <body>
@@ -28,13 +38,12 @@
                 <h4>Compax Software</h4>
 
                 <div class="opzioni">
-                    <a class="aNav" href="../homepage/index.php">Home</a>
-                    <a class="aNav" href="../homepage/index.php#diploma">Disploma</a>
-                    <a class="aNav" href="../homepage/index.php#percorsi">Medie</a>
+                    <a class="aNav" href="../index.php">Home</a>
+                    <a class="aNav" href="../index.php#diploma">Disploma</a>
+                    <a class="aNav" href="../index.php#percorsi">Medie</a>
                     <a class="aNav" href="#">Statistiche</a>
                     <a class="aNav" href="../chi siamo/chiSiamo.php">Chi siamo</a>
                     <a class="aNav" href="../contatti/contatti.php">Contatti</a>
-                    <a class="aNav" href="../admin/adminLogin/adminLogin.php">Area riservata</a>
                 </div>
 
                 <button class="panino">
@@ -63,20 +72,22 @@
             </div>
 
             <div class="immagine">
-                <img src="../img/telefono.png" alt="">
+                <img src="./img/telefono.png" alt="">
             </div>
         </div>
     </div>
 
     <section>
         <form action="inviaMessaggio.php" class="contattaci" method="post">
+            <h1 style="display: block;">Non esitare a contattarci!</h1>
             <input type="text" placeholder="Nome" class="nomeForm" name="nome">
             <input type="text" placeholder="Cognome" class="cognomeForm" name="cognome"><br>
             <input type="email" placeholder="Email" class="emailForm" name="email"><br>
             <textarea placeholder="Testo" name="testo" cols="30" rows="10"
                 style="width: 87%; height: 40%; resize: none;"></textarea><br>
-            <input type="checkbox" name="policy" class="check" value="checked"><label>Accetto le condizioni sulle
-                policy</label>
+            <div>
+                <input type="checkbox" name="policy" class="check" value="checked" required><label for="policy"><a href="https://www.iubenda.com/termini-e-condizioni/89185341" class="iubenda-nostyle no-brand iubenda-noiframe iubenda-embed iubenda-noiframe " title="Termini e Condizioni " style="color: black;">Accetto Termini e Condizioni</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></label>
+            </div>
             <button type="submit" class="but-contatti" name="invia">Invia</button>
         </form>
 
@@ -132,17 +143,17 @@
         <div class="emailInput">
             <hr>
             <form action="#">
-                <input id="email" type="text" name="email" placeholder="Email" />
+                <input id="email" type="text" name="email" placeholder="Email" disabled/>
 
-                <input type="submit" class="but-email" value="Invia" name="inviaEmail">
+                <input type="submit" class="but-email" value="Invia" name="inviaEmail" disabled>
                 <p>Iscriviti e rimani sempre aggiornato</p>
 
                 <div class="social">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://instagram.com/compaxsoftware?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://github.com/Seagull2004/Compax-Software"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </form>
 
@@ -153,13 +164,13 @@
 
         <div class="copyright">
             <p>© 2023 Compax Software - All rights reserved</p>
-            <p>Compax Software - P.IVA 01234567890 - Cap. Soc. 50.000,00 €</p>
+            <p>Cap. Soc. 50.000,00 € - <a href="https://www.iubenda.com/privacy-policy/89185341" class="iubenda-nostyle no-brand iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy " style="color: black;">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></p>
         </div>
 
     </footer>
 
 
-    <script src="../homepage/panino.js"></script>
+    <script src="../panino.js"></script>
 </body>
 
 </html>
