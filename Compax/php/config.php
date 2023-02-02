@@ -1,5 +1,5 @@
 <?php
-include_once("./generalConfig.php");
+include_once("generalConfig.php");
 
 $sqlRegioni = "SELECT DISTINCT Regione FROM scuole ORDER BY `scuole`.`Regione` ASC";
 $sqlProvincia = "SELECT DISTINCT Provincia FROM scuole ORDER BY `scuole`.`Provincia` ASC";
