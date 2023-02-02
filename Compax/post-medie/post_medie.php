@@ -10,40 +10,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="post_medie.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js" integrity="sha512-bztGAvCE/3+a1Oh0gUro7BHukf6v7zpzrAb3ReWAVrt+bVNNphcl2tDTKCBr5zk7iEDmQ2Bv401fX3jeVXGIcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Post medie</title>
     <script src="./post_medie.js"></script>
+    <link rel="stylesheet" href="post_medie.css">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XKFT4TNP60"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XKFT4TNP60');
+        </script>
 </head>
-
-<style>
-.paragrafo{
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align:center;
-}
-
-.button{
-        padding: 12px 24px;
-        font-size: 16px;
-        color: white;
-        background-color: #0063AC;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        text-align: center;
-        transition: background-color 0.3s ease;
-        margin-top: 20px;
-        box-shadow: 11px 14px 22px 3px rgba(0,0,0,0.1);
-}
-
-button:hover {
-        background-color: #4398D7;
-}
-</style>
-
 
 <body>
     <section>
@@ -54,7 +37,7 @@ button:hover {
 
         
             <div class="header">
-                    <div class='content_header'>
+                <div class='content_header'>
                     <p class='paragrafo'>Inserisci il tuo nome e la scuola che hai frequentato</p>
                 
                     <hr>
@@ -107,7 +90,7 @@ button:hover {
                             </button>
                         </submit>
                     </form>
-            </div>
+                </div>
             </div>  
     </section>
 </body>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Scuola adatta</title>
+    <link rel="stylesheet" href="templateStampa.css">
+</head>
+
+<body>
+    <section>
+        <div class="bar">
+            <div class="width"></div>
+        </div>
+
+        <!--
+        <img src="cappelloViola.webp" alt="" class="cappelloViola">
+        <img src="diploma.webp" alt="" class="diploma">
+        <img src="mappamondo.webp" alt="" class="mappamondo">-->
+
+        <div class="header">
+            <div class="info">
+                <form>
+                    <h1 style="font-size: 50px; text-align: center; margin-top: 5%;" class="compaxsoftware">Certificato
+                        Compax Software</h1>
+                    <div class="titolo">
+                        <h1>Benvenuto
+                            {{ nome }} !
+                        </h1>
+                    </div>
+                    <h2>Ecco qui le scuole che ti si addicono di più in base alle tue risposte: </h2>
+
+                    <h2 style="margin-top: 7%; font-size: x-large;">La scuola più adatta a te è: </h2>
+                    <h3>
+                        {{ primo_istituto_adatto }}
+                        <p>
+                            {{ pt_primo_istituto_adatto }}
+                        </p>
+                    </h3>
+
+                    <div class="scuole">
+                        <div class="seconda">
+                            <h4>La seconda scuola più adatta a te è: </h4>
+                            <h5>
+                                {{ secondo_istituto_adatto }}
+                                <p>
+                                    {{ pt_secondo_istituto_adatto }}
+                                </p>
+                            </h5>
+                        </div>
+                        <div class="terza">
+                            <h4>La terza scuola più adatta a te è: </h4>
+                            <h5>
+                                {{ terzo_istituto_adatto }}
+                                <p>
+                                    {{ pt_terzo_istituto_adatto }}
+                                </p>
+                            </h5>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

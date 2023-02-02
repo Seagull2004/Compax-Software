@@ -109,7 +109,7 @@ else
 }
 
 $conn->close();
-echo "la connessione è stata appena chiusa e i dati sono stati inseriti con successo";
+//echo "la connessione è stata appena chiusa e i dati sono stati inseriti con successo";
 
 // Effettuo il redirect verso la pagina di destinazione
-header("Location: ./risultati_medie.php?nome=" . $nome . "&regione=" . $regione . "&provincia=" . $provincia . "&comune=" . $comune . "&id_scuola=" . $id_scuola . "&primo_istituto_adatto=" . $primo_istituto_adatto . "&pt_primo_istituto_adatto=" . $pt_primo_istituto_adatto . "&secondo_istituto_adatto=" . $secondo_istituto_adatto . "&pt_secondo_istituto_adatto=" . $pt_secondo_istituto_adatto . "&terzo_istituto_adatto=" . $terzo_istituto_adatto . "&pt_terzo_istituto_adatto=" . $pt_terzo_istituto_adatto);
+header("Location: risultati_medie.php?nome=" . $nome . "&regione=" . $regione . "&provincia=" . $provincia . "&comune=" . $comune . "&id_scuola=" . $id_scuola . "&primo_istituto_adatto=" . $primo_istituto_adatto . "&pt_primo_istituto_adatto=" . $pt_primo_istituto_adatto . "&secondo_istituto_adatto=" . $secondo_istituto_adatto . "&pt_secondo_istituto_adatto=" . $pt_secondo_istituto_adatto . "&terzo_istituto_adatto=" . $terzo_istituto_adatto . "&pt_terzo_istituto_adatto=" . $pt_terzo_istituto_adatto);
