@@ -103,7 +103,7 @@ if(!isset($_SESSION['admin'])){
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
               <li class="items-center">
                 <a
-                  class="text-sky-600 hover:text-sky-600 text-xs uppercase py-3 font-bold block"
+                  class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   href="../indexDashboard.php"
                   ><i class="fas fa-tv opacity-75 mr-2 text-sm"></i>
                   Dashboard</a
@@ -135,7 +135,7 @@ if(!isset($_SESSION['admin'])){
               </li>
               <li class="items-center">
                 <a
-                  class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  class="text-sky-600 hover:text-sky-600 text-xs uppercase py-3 font-bold block"
                   href="messaggi.php"
                   ><i
                     class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
@@ -191,7 +191,7 @@ if(!isset($_SESSION['admin'])){
           <div class="px-4 md:px-10 mx-auto mx-auto w-full"></div>
         </div>
 
-        <div class="px-4 md:px-10 mx-auto w-full -m-24">
+        <div class="pb-60 px-4 md:px-10 mx-auto w-full -m-24">
           <div class="flex flex-wrap">
           </div>
           
@@ -206,7 +206,7 @@ if(!isset($_SESSION['admin'])){
 
             echo "<div class='w-full xl:w-8/12 mb-12 xl:mb-0 px-0 mx-auto mt-6'>
             <div class='relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded'>
-            <div class='rounded-t mb-0 px-0 py-6 border-0'>
+            <div class='rounded-t mb-0 px-0 py-6 border-0 pb-10'>
             <div class='flex flex-wrap items-center'>
             <div class='relative w-full max-w-full flex-grow flex-1'>
             <h3 class='font-semibold text-base text-blueGray-700 mb-3 px-6'>Messaggi degli utenti:</h3>";
@@ -218,8 +218,8 @@ if(!isset($_SESSION['admin'])){
                 <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>email</th>
                 <th class='px-6 bg-slate-100 text-slate-600 align-middle border border-solid border-slate-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left'>testo</th>
                 </tr>";
+                
 
-            
                 while($row = $result->fetch_assoc()) {
                     echo "
                     <tr>
@@ -237,66 +237,66 @@ if(!isset($_SESSION['admin'])){
             $conn->close();
             ?>
 
-    
           </div>
-          
-          <footer class="block h-screen relative">
-            <div class="container px-6 absolute bottom-10">
-              <hr class="mb-4 border-b-1 border-blueGray-200"/>
-              <div class="flex flex-wrap items-center md:justify-between justify-center">
-                <div class="w-full md:w-4/12 px-4">
-                  <div class="text-sm text-blueGray-500 font-semibold py-1">
-                    Copyright © <span id="javascript-date"></span>
+        </div>
+
+        <footer class="mt-60 block">
+          <div class="container px-6 absolute bottom-10">
+            <hr class="mb-4 border-b-1 border-blueGray-200"/>
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+              <div class="w-full md:w-4/12 px-4">
+                <div class="text-sm text-blueGray-500 font-semibold py-1">
+                  Copyright © <span id="javascript-date"></span>
+                  <a
+                    href="https://www.creative-tim.com"
+                    class="text-blueGray-500 hover:text-blueGray-700 text-sm font-semibold py-1"
+                  >
+                    Creative Tim
+                  </a>
+                </div>
+              </div>
+              <div class="w-full md:w-8/12 px-4">
+                <ul class="flex flex-wrap list-none md:justify-end  justify-center">
+                  <li>
                     <a
                       href="https://www.creative-tim.com"
-                      class="text-blueGray-500 hover:text-blueGray-700 text-sm font-semibold py-1"
+                      class="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
                     >
                       Creative Tim
                     </a>
-                  </div>
-                </div>
-                <div class="w-full md:w-8/12 px-4">
-                  <ul class="flex flex-wrap list-none md:justify-end  justify-center">
-                    <li>
-                      <a
-                        href="https://www.creative-tim.com"
-                        class="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
-                      >
-                        Creative Tim
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.creative-tim.com/presentation"
-                        class="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
-                      >
-                        About Us
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="http://blog.creative-tim.com"
-                        class="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://github.com/creativetimofficial/tailwind-starter-kit/blob/main/LICENSE.md"
-                        class="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
-                      >
-                        MIT License
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.creative-tim.com/presentation"
+                      class="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
+                    >
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://blog.creative-tim.com"
+                      class="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
+                    >
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/creativetimofficial/tailwind-starter-kit/blob/main/LICENSE.md"
+                      class="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
+                    >
+                      MIT License
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
-          </footer>
-        </div>
+          </div>
+        </footer>
       </div>
     </div>
+
 
     <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
     <script type="text/javascript">

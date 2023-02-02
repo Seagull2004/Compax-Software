@@ -76,12 +76,12 @@ if(!isset($_SESSION['admin'])){
           </div>
           <ul class="md:flex-col md:min-w-full flex flex-col list-none">
             <li class="items-center">
-              <a class="text-sky-600 hover:text-sky-600 text-xs uppercase py-3 font-bold block"
+              <a class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                 href="../indexDashboard.php"><i class="fas fa-tv opacity-75 mr-2 text-sm"></i>
                 Dashboard</a>
             </li>
             <li class="items-center">
-              <a class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+              <a class="text-sky-600 hover:text-sky-600 text-xs uppercase py-3 font-bold block"
                 href="domande_risposte_medie.php"><i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
                 Gestisci domande</a>
             </li>
@@ -282,7 +282,7 @@ if(!isset($_SESSION['admin'])){
 
 
 
-        <footer class="block py-6">
+        <footer class="block py-6 w-full">
           <div class="container mx-auto px-6">
             <hr class="mb-4 border-b-1 border-blueGray-200" />
             <div class="flex flex-wrap items-center md:justify-between justify-center">

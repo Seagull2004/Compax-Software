@@ -103,7 +103,7 @@ if(!isset($_SESSION['admin'])){
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
               <li class="items-center">
                 <a
-                  class="text-sky-600 hover:text-sky-600 text-xs uppercase py-3 font-bold block"
+                  class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   href="../indexDashboard.php"
                   ><i class="fas fa-tv opacity-75 mr-2 text-sm"></i>
                   Dashboard</a
@@ -119,7 +119,7 @@ if(!isset($_SESSION['admin'])){
               </li>
               <li class="items-center">
                 <a
-                  class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  class="text-sky-600 hover:text-sky-600 text-xs uppercase py-3 font-bold block"
                   href="#/profile"
                   ><i class="fas fa-user-circle text-blueGray-300 mr-2 text-sm"></i>
                   Risultati</a
