@@ -96,8 +96,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet facilisis neque. Aliquam posuere
                     varius est, eu fermentum lacus fringilla quis. </p>
                 <div class="content-mail">
-                    <input type="mail" placeholder="Inserisci la tua mail" name="email" id="email" required>
-                    <button class="contattaci">Contattaci</button>
+                    <input type="mail" placeholder="Inserisci la tua mail" name="email" id="email" disabled>
+                    <button class="contattaci" disabled>Contattaci</button>
                 </div>
             </div>
             <div class="immagine">
@@ -236,27 +236,27 @@
                 </ul>
             </div>
 
-            <div class="linkutili">
+            <div class="linkutili" style="text-align: center; margin-left: -10%;">
                 <h3>Link utili</h3>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#diploma">Post-diploma</a></li>
                     <li><a href="#percorsi">Post-medie</a></li>
                     <li><a href="#percorsi">Statistiche</a></li>
-                    <li><a href="#">Chi siamo</a></li>
-                    <li><a href="#">Contatti</a></li>
+                    <li><a href="./chi siamo/chiSiamo.php">Chi siamo</a></li>
+                    <li><a href="./contatti/contatti.php">Contatti</a></li>
                 </ul>
             </div>
 
-            <div class="linkutili2">
-                <h3>Link utili</h3>
+            <div class="linkutili2" style="text-align: right;">
+                <h3>Info</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#diploma">Post-diploma</a></li>
-                    <li><a href="#percorsi">Post-medie</a></li>
-                    <li><a href="#">Statistiche</a></li>
-                    <li><a href="#">Chi siamo</a></li>
-                    <li><a href="#">Contatti</a></li>
+                    <li><a href="#">Promozioni</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Lavora con noi</a></li>
+                    <li><a href="./admin/adminLogin/adminLogin.php">Area riservata</a></li>
                 </ul>
             </div>
 
@@ -293,7 +293,7 @@
     </footer>
 
 
-    <script src="../homepage/panino.js"></script>
+    <script src="../panino.js"></script>
 </body>
 
 </html>

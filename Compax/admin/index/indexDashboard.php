@@ -300,8 +300,8 @@ if(!isset($_SESSION['admin'])){
             <h3 class='font-semibold text-base text-blueGray-700'>Risultati studenti medie:</h3></div>
 
             <div class='relative w-full px-4 max-w-full flex-grow flex-1 text-right mb-3'>
-            <button class='bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1'
-              type='button' style='transition:all .15s ease'>Di più</button></div>";
+            <button class='bg-sky-600 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1'
+              type='button' style='transition:all .15s ease' onclick=location.href='./risultati/risultati_medie.php'>Di più</button></div>";
             if ($result->num_rows > 0) {
                 echo "<table class='items-center w-full bg-transparent border-collapse'>
                 <tr>

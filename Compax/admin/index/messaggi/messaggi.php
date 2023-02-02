@@ -68,7 +68,7 @@ if(!isset($_SESSION['admin'])){
                     ><img
                       alt="..."
                       class="w-full rounded-full align-middle border-none shadow-lg"
-                      src="./assets/img/team-1-800x800.jpg"
+                      src="../../../img/logo.png"
                   /></span></div
               ></a>
             </li>
@@ -175,7 +175,7 @@ if(!isset($_SESSION['admin'])){
                   <img
                       alt="..."
                       class="w-full rounded-full align-middle border-none shadow-lg"
-                      src="./assets/img/team-1-800x800.jpg"
+                      src="../../../img/logo.png"
                   />
                 </span>
                 </div>
