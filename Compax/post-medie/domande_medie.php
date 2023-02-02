@@ -11,6 +11,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <title>Domande medie</title>
+
+    
 </head>
 <script src="./post_medie.js"></script>
 <script>
@@ -62,6 +64,14 @@
         })
         $('.content').append("<hr></hr>")
     })
+
+    $('.content input[type="checkbox"]').click(function () {
+    var checkbox = $(this);
+    var nomeDomanda = checkbox.attr("name");
+    if (checkbox.is(':checked')) {
+        $("input[type='checkbox'][name='" + nomeDomanda + "']").not(checkbox).prop('checked', false);
+    }
+    });
 }
 
 

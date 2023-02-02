@@ -40,7 +40,7 @@
                 <form action="generaPDF.php" method="GET">
                     <h1 style="font-size: 50px; text-align: center; margin-top: 5%; display: none;" class="compaxsoftware">Certificato Compax Software</h1>
                     <div class="titolo">
-                        <h1>Benvenuto <input type="text" name="nome" value="<?php echo $nome?>" readonly> !</h1>
+                        <h1>Benvenuto <input type="text" name="nome" value="<?php echo $nome?>" readonly></h1>
                     </div>
                     <h2>Ecco qui le scuole che ti si addicono di più in base alle tue risposte: </h2>
 
@@ -58,9 +58,9 @@
                             <h5><input readonly type="text" name="terzo_istituto_adatto" value="<?php echo substr(str_replace("_", " ", $terzo_istituto_adatto), 5)?>"><p><input readonly type="text" name="pt_terzo_istituto_adatto" value="(<?php echo $pt_terzo_istituto_adatto?> punti)"></p></h5>
                         </div>
                     </div>
-                    <input class="button-19 no-stampa" role="button" type="submit" value="Stampa">
+                    <button class="button-19" type="button" onclick="location.href='/Compax/index.php'">Homepage</button>
+                    <input class="button-19" type="submit" value="Stampa">
                 </form>
-                <button class="button-19 no-stampa" role="button" onclick="location.href='/Compax/index.php'">Homepage</button>
             </div>
         </div>
     </section>

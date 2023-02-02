@@ -134,3 +134,80 @@ input[type=submit]{
 button:hover {
     background-color: #2893e5;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+    .cappelloViola{
+        display: none;
+    }
+    
+    .diploma{
+        display: none;
+    }
+    
+    .mappamondo{
+        display: none;
+    }
+
+    section{
+        height: 870px; 
+    }
+
+    form{
+        width: 90%;
+        height: 840px;
+    }
+
+    .infoUtente{
+        display: none;
+    }
+
+    .content h1{
+        font-size: 20px;
+        margin-top: 5%;
+    }
+
+    .content{
+        display: flex;
+        justify-content: center;
+    }
+
+    .content label{
+        font-size: 13px;
+        text-align: center;
+        width: 95%;
+        margin-bottom: 7%;
+    }
+
+    input[type=submit]{
+        padding: 3%;
+        font-size: 16px;
+        color: white;
+        background-color: #0063AC;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+        box-shadow: 11px 14px 22px 3px rgba(0,0,0,0.1);
+        width: 50%;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #2893e5;
+    }
+}

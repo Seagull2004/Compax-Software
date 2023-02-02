@@ -29,6 +29,7 @@ section{
     margin: 3.5% auto;
     background-image: url(../img/pattern1.png);
     border-radius: 5px;
+    padding-top: 3%;
 }
 
 .bar{
@@ -124,7 +125,7 @@ select:focus{
     color: #0063AC;
     width: 70%;
     margin: auto;
-    height: 650px;
+    height: 580px;
 }
 
 
@@ -171,4 +172,64 @@ select:focus{
 
 button:hover {
     background-color: #2893e5;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px){
+    .cappelloViola{
+        display: none;
+    }
+    
+    .diploma{
+        display: none;
+    }
+    
+    .mappamondo{
+        display: none;
+    }
+
+    section{
+        height: 870px;
+        
+    }
+
+    .header{
+        width: 90%;
+        height: 840px;
+    }
+
+    input{
+        margin-top: 2rem;
+        padding: 5%;
+        width: 90%;
+    }
+ 
+    select{
+        margin-top: 2rem;
+        padding: 5%;
+        width: 90%;
+    }
+
+    .button{
+        padding: 12px 24px;
+        font-size: 16px;
+        color: white;
+        background-color: #0063AC;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+        box-shadow: 11px 14px 22px 3px rgba(0,0,0,0.1);
+    }
+    
+    button:hover {
+        background-color: #2893e5;
+    }
 }
