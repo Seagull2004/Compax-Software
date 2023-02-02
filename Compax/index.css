@@ -519,6 +519,23 @@ input[type=text]:focus{
 
 @media (max-width: 768px){
 
+    .footerIndex{
+        margin-top: 5vh;
+    }
+
+    #pie-chart{
+        height: 500px;
+        padding-top: 20%;
+        padding-bottom: 20%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #statistiche{
+        margin-top: 10vh;
+    }
+
+
     *{
         font-family: 'Poppins', sans-serif;
         text-decoration: none;
@@ -565,8 +582,6 @@ input[type=text]:focus{
     }
 
     
-
-
     .immagine img{
         display: none;
     }
@@ -861,6 +876,22 @@ input[type=text]:focus{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 2) {
+
+    .footerIndex{
+        margin-top: 5vh;
+    }
+
+    #pie-chart{
+        height: 500px;
+        padding-top: 20%;
+        padding-bottom: 20%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #statistiche{
+        margin-top: 10vh;
+    }
 
     .panino{
         display: block;
