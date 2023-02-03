@@ -1,5 +1,5 @@
 <?php
-$serverName = "localhost:3307";
+$serverName = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
 $dbName = "my_compaxsw";
