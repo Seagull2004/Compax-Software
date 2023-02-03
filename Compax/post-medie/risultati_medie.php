@@ -58,12 +58,7 @@
                             <h5><input readonly type="text" name="terzo_istituto_adatto" value="<?php echo substr(str_replace("_", " ", $terzo_istituto_adatto), 5)?>"><p><input readonly type="text" name="pt_terzo_istituto_adatto" value="(<?php echo $pt_terzo_istituto_adatto?> punti)"></p></h5>
                         </div>
                     </div>
-                    <a href="../index.php">
-                        <button class="button-19" type="button">
-                            Homepage
-                        </button>
-                    </a>
-                    
+                    <button class="button-19" type="button" onclick="location.href='../index.php'">Homepage</button>
                     <input class="button-19" type="submit" value="Stampa">
                 </form>
             </div>

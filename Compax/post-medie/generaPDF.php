@@ -49,7 +49,7 @@ $dompdf->addInfo("Author", "Compax Software");
 /**
  * Send the PDF to the browser
  */
-$dompdf->stream("scuoleSuperioriCS.pdf", ["Attachment" => 0]);
+$dompdf->stream("scuoleSuperioriCS.pdf", ["Attachment" => 1]);
 
 /**
  * Save the PDF file locally

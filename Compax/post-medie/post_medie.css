@@ -63,6 +63,7 @@ input{
     margin-top: 1.5rem;
     padding: 2%;
     width: 50%;
+    min-width: 290px;
     border-radius: 20px;
     border: none;
     border-radius: 18px;
@@ -79,6 +80,7 @@ select{
     margin-top: 1.5rem;
     padding: 2%;
     width: 50%;
+    min-width: 290px;
     border-radius: 20px;
     border: none;
     border-radius: 18px;
@@ -209,11 +211,6 @@ button:hover {
         width: 90%;
     }
  
-    select{
-        margin-top: 2rem;
-        padding: 5%;
-        width: 90%;
-    }
 
     .button{
         padding: 12px 24px;
