@@ -75,6 +75,20 @@ form button{
     background: linear-gradient(45deg, rgba(25,150,255,1) 0%, rgba(70,214,255,1) 38%, rgba(73,236,255,0.9755252442773985) 65%);
 }
 
+.bottoni{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.indietro{
+    background: rgb(240,104,6);
+    background: -moz-linear-gradient(90deg, rgba(240,104,6,1) 0%, rgba(253,29,29,1) 61%);
+    background: -webkit-linear-gradient(90deg, rgba(240,104,6,1) 0%, rgba(253,29,29,1) 61%);
+    background: linear-gradient(90deg, rgba(240,104,6,1) 0%, rgba(253,29,29,1) 61%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f06806",endColorstr="#fd1d1d",GradientType=1);
+}
+
 
 .area{
     background: #4e83c8;  

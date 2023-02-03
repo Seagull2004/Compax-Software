@@ -1,5 +1,4 @@
 <?php
-include_once '../../../php/config.php';
 include_once('../../../php/generalConfig.php');
 if (isset($_POST['domanda']) && isset($_POST['num_risposte'])) {
     $domanda = $_POST['domanda'];

@@ -16,7 +16,10 @@
         <form action="./login-out/login.php" method="post">
             <input type="text" placeholder="username" name="username">
             <input type="password" placeholder="password" name="password">
-            <button name="accedi">Accedi</button>
+            <div class="bottoni">
+                <button class="indietro" onclick="location.href='../../index.php'" type="button">Indietro</button>
+                <button name="accedi" type="submit">Accedi</button>
+            </div>
         </form>
     </div>
 
