@@ -263,7 +263,7 @@
 
     <section class="grafico mostra">
         <h2 id="statistiche">Grafici e statistiche</h2>
-        <div id="pie-chart" class="mostra"></div>
+        <div id="pie-chart"></div>
     </section>
 
 
