@@ -3,15 +3,20 @@ include_once("../php/generalConfig.php");
 
 $sqlRisposteMedie = "SELECT punti_liceo_sportivo, punti_conservatorio, punti_istituto_professionale, punti_istituto_tecnico	punti_liceo_scientifico, punti_liceo_classico, punti_scienze_umane, punti_istituto_tecnico_turistico, punti_professionale_sociale, punti_liceo_linguistico FROM risposte_medie";
 
-// Dopo aver trovato gli id di tutte le risposte date modifico la query in modo tale da richiedere una tabelle con le sole risposte di interesse
+
+
+// Dopo aver trovato gli id di tutte le risposte date modifico la query in modo tale da richiedere una tabella con le sole risposte selezionate
 $i = 0;
 $arrayRisposteDate = array();
 foreach ($_POST as $key => $value) 
 {
     $i++;
     if($i > 5)
-        array_push($arrayRisposteDate, $key);
+    {
+        array_push($arrayRisposteDate, $value);
+    }
 }
+
 foreach ($arrayRisposteDate as $key => $value) 
 {
     if($key != 0)
@@ -23,7 +28,11 @@ foreach ($arrayRisposteDate as $key => $value)
         $sqlRisposteMedie .= " WHERE id_risposta = " . $value;
     }
 }
+echo $sqlRisposteMedie;
 
+
+
+// applico la query e la salvo in $risposteMedie, e definisco un array che mi conterrà le risposte selezionate con i punteggi
 $risposteMedie = mysqli_query($conn, $sqlRisposteMedie);
 $arrayRisposteMedie = array();
 while($row = mysqli_fetch_assoc($risposteMedie))
@@ -31,29 +40,33 @@ while($row = mysqli_fetch_assoc($risposteMedie))
     $arrayRisposteMedie[] = $row;
 }
 
+
+// definisco un array che mi conterrà i punteggi relativi ad ogni istuto e lo inizializzo inserendo come chiave il nome di un determinato istituto
 $punteggiIstituti = array();
 foreach ($arrayRisposteMedie[0] as $key => $value) 
 {
     $punteggiIstituti[$key] = 0;
 }
 
+// popolo l'array dei punteggi
+
 foreach($punteggiIstituti as $key => $value)
 {
-    // echo "adesso analizzo i " . $key . "<br>";
+
     foreach ($arrayRisposteMedie as $key2 => $value2) 
     {
         foreach ($value2 as $key3 => $value3) 
         {
             if($key == $key3)
             {
-                // echo $value . " + " . $value3 . " = ";
-                $value = $value + $value3;
-                // echo $value . "<br>";
+                $value += $value3;
             }
         }
     }
     $punteggiIstituti[$key] = $value;
 }
+
+
 
 asort($punteggiIstituti);
 $punteggiIstituti = array_reverse($punteggiIstituti);

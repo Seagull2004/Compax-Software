@@ -43,36 +43,75 @@
         generaForm()
     });
 
-    function generaForm() {
-    domande.forEach(function (item, i) {
-        $('.content').append("<h1 style='text-align: center; padding-top: 2%;'> Domanda " + (i+1) + "</h1>")
-        $('.content').append("<label style='font-family: system-ui, sans-serif; font-size: 1.5rem; font-weight: bold;'>" + item.domanda + "</label>")
-        risposte.forEach(function (itemRisposte, iRisposte) {
-            if (item.id_domanda == itemRisposte.id_domanda) {
-                $('.content').append(
-                    "<label class='container' value='" +
-                    itemRisposte.id_risposta +
-                    "'>" +
-                    itemRisposte.risposta +
-                    "<input type='checkbox' name='" +
-                    itemRisposte.id_risposta +
-                    "' value = '" +
-                    itemRisposte.risposta +
-                    "'><span class='checkmark'></span></label>"
-                )
-            }
-        })
-        $('.content').append("<hr></hr>")
-    })
+    function generaForm() 
+    {
+        domande.forEach(function (item, i) {
+            $('.content').append("<h1 style='text-align: center; padding-top: 2%;'> Domanda " + (i+1) + "</h1>")
+            $('.content').append("<label style='font-family: system-ui, sans-serif; font-size: 1.5rem; font-weight: bold;'>" + item.domanda + "</label>")
+            
+            let nrRisposte = 0
+            risposte.forEach(function (itemRisposte, iRisposte) 
+            {
+                if (item.id_domanda == itemRisposte.id_domanda) 
+                {
+                    nrRisposte++
+                }
+            })
 
-    $('.content input[type="checkbox"]').click(function () {
-    var checkbox = $(this);
-    var nomeDomanda = checkbox.attr("name");
-    if (checkbox.is(':checked')) {
-        $("input[type='checkbox'][name='" + nomeDomanda + "']").not(checkbox).prop('checked', false);
+            var nrDomanda = 0
+            if(nrRisposte <= 3)
+            {
+                risposte.forEach(function (itemRisposte, iRisposte) 
+                {
+                    if (item.id_domanda == itemRisposte.id_domanda) 
+                    {
+                        $('.content').append(
+                            "<label class='container' value='" +
+                            itemRisposte.id_risposta +
+                            "'>" +
+                            itemRisposte.risposta +
+                            "<input type='radio' name='" +
+                            itemRisposte.id_domanda +
+                            "' value = '" +
+                            itemRisposte.id_risposta +
+                            "'><span class='checkmark'></span></label>"
+                        )
+                    }
+                })
+            }
+            else
+            {
+                risposte.forEach(function (itemRisposte, iRisposte) 
+                {
+                    if (item.id_domanda == itemRisposte.id_domanda) 
+                    {
+                        $('.content').append(
+                            "<label class='container' value='" +
+                            itemRisposte.id_risposta +
+                            "'>" +
+                            itemRisposte.risposta +
+                            "<input type='checkbox' name='" +
+                            itemRisposte.id_domanda +
+                            "' value = '" +
+                            itemRisposte.id_risposta +
+                            "'><span class='checkmark'></span></label>"
+                        )
+                    }
+                })
+            }
+            $('.content').append("<hr></hr>")
+        })
+
+        /*
+        $('.content input[type="checkbox"]').click(function () {
+        var checkbox = $(this);
+        var nomeDomanda = checkbox.attr("name");
+        if (checkbox.is(':checked')) {
+            $("input[type='checkbox'][name='" + nomeDomanda + "']").not(checkbox).prop('checked', false);
+        }
+        });
+        */
     }
-    });
-}
 
 
 </script>
